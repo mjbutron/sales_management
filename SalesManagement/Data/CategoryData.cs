@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Data
 {
-    class CategoryData
+    public class CategoryData
     {
         private int _IdCategory;
         private string _Name;
