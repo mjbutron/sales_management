@@ -8,6 +8,6 @@ namespace Data
 {
     class Connection
     {
-        public static string Con = "Data Source=MARCOS; Initial Catalog=dbsisventas; Integrated Security=true";
+        public static string Con = "Data Source=MARCOS; Initial Catalog=sisventasdb; Integrated Security=true";
     }
 }

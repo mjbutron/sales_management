@@ -117,6 +117,8 @@
             this.dataList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataList.Size = new System.Drawing.Size(610, 201);
             this.dataList.TabIndex = 7;
+            this.dataList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataList_CellContentClick);
+            this.dataList.DoubleClick += new System.EventHandler(this.dataList_DoubleClick);
             // 
             // Eliminar
             // 
@@ -142,6 +144,7 @@
             this.chkDelete.TabIndex = 5;
             this.chkDelete.Text = "Selección";
             this.chkDelete.UseVisualStyleBackColor = true;
+            this.chkDelete.CheckedChanged += new System.EventHandler(this.chkDelete_CheckedChanged);
             // 
             // btnPrint
             // 
@@ -160,6 +163,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "&Eliminar";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSearch
             // 
@@ -169,6 +173,7 @@
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "&Buscar";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtFindtext
             // 
@@ -176,6 +181,7 @@
             this.txtFindtext.Name = "txtFindtext";
             this.txtFindtext.Size = new System.Drawing.Size(135, 20);
             this.txtFindtext.TabIndex = 1;
+            this.txtFindtext.TextChanged += new System.EventHandler(this.txtFindtext_TextChanged);
             // 
             // label2
             // 
@@ -224,6 +230,7 @@
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "&Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnEdit
             // 
@@ -233,6 +240,7 @@
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "E&ditar";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSave
             // 
@@ -242,6 +250,7 @@
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "&Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnNew
             // 
@@ -251,6 +260,7 @@
             this.btnNew.TabIndex = 6;
             this.btnNew.Text = "&Nuevo";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // txtDescriptioncategory
             // 
@@ -301,7 +311,6 @@
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Código:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // errorInput
             // 
@@ -316,6 +325,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CategoryView";
             this.Text = "Gestión de Categorías";
+            this.Load += new System.EventHandler(this.CategoryView_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
