@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SalesManagement.Properties {
+namespace View.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace SalesManagement.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SalesManagement.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("View.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -65,7 +65,7 @@ namespace SalesManagement.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap default_image {
             get {
-                object obj = ResourceManager.GetObject("default_image", resourceCulture);
+                object obj = ResourceManager.GetObject("default-image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

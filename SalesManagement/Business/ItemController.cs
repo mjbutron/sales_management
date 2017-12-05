@@ -8,7 +8,7 @@ using Data;
 
 namespace Business
 {
-    class ItemController
+    public class ItemController
     {
         #region Methods
         public static string Insert(string codeIt, string nameIt, string descriptionIt, byte[] imagenIt, int idCat)
