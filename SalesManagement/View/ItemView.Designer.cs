@@ -51,24 +51,24 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.pbxImage = new System.Windows.Forms.PictureBox();
+            this.txtCodeitem = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.errorInput = new System.Windows.Forms.ErrorProvider(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCodeitem = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pbxImage = new System.Windows.Forms.PictureBox();
-            this.btnLoad = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.cbxCategory = new System.Windows.Forms.ComboBox();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataList)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInput)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -113,6 +113,8 @@
             this.dataList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataList.Size = new System.Drawing.Size(610, 201);
             this.dataList.TabIndex = 7;
+            this.dataList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataList_CellContentClick);
+            this.dataList.DoubleClick += new System.EventHandler(this.dataList_DoubleClick);
             // 
             // Eliminar
             // 
@@ -138,6 +140,7 @@
             this.chkDelete.TabIndex = 5;
             this.chkDelete.Text = "Selección";
             this.chkDelete.UseVisualStyleBackColor = true;
+            this.chkDelete.CheckedChanged += new System.EventHandler(this.chkDelete_CheckedChanged);
             // 
             // btnPrint
             // 
@@ -156,6 +159,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "&Eliminar";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSearch
             // 
@@ -267,7 +271,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxCategory);
             this.groupBox1.Controls.Add(this.btnClear);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btnLoad);
             this.groupBox1.Controls.Add(this.pbxImage);
             this.groupBox1.Controls.Add(this.txtCodeitem);
@@ -288,6 +294,52 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Artículos";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(560, 69);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(47, 23);
+            this.btnClear.TabIndex = 14;
+            this.btnClear.Text = "Quitar";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(560, 40);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(47, 23);
+            this.btnLoad.TabIndex = 13;
+            this.btnLoad.Text = "Cargar";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // pbxImage
+            // 
+            this.pbxImage.Image = global::View.Properties.Resources.default_image;
+            this.pbxImage.Location = new System.Drawing.Point(398, 40);
+            this.pbxImage.Name = "pbxImage";
+            this.pbxImage.Size = new System.Drawing.Size(155, 178);
+            this.pbxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxImage.TabIndex = 12;
+            this.pbxImage.TabStop = false;
+            // 
+            // txtCodeitem
+            // 
+            this.txtCodeitem.Location = new System.Drawing.Point(116, 40);
+            this.txtCodeitem.Name = "txtCodeitem";
+            this.txtCodeitem.Size = new System.Drawing.Size(248, 20);
+            this.txtCodeitem.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Código de producto:";
             // 
             // tabPage2
             // 
@@ -325,56 +377,10 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Artículos";
             // 
-            // txtCodeitem
-            // 
-            this.txtCodeitem.Location = new System.Drawing.Point(116, 40);
-            this.txtCodeitem.Name = "txtCodeitem";
-            this.txtCodeitem.Size = new System.Drawing.Size(248, 20);
-            this.txtCodeitem.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Código de producto:";
-            // 
-            // pbxImage
-            // 
-            this.pbxImage.Image = global::View.Properties.Resources.default_image;
-            this.pbxImage.Location = new System.Drawing.Point(398, 40);
-            this.pbxImage.Name = "pbxImage";
-            this.pbxImage.Size = new System.Drawing.Size(155, 178);
-            this.pbxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxImage.TabIndex = 12;
-            this.pbxImage.TabStop = false;
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Location = new System.Drawing.Point(560, 40);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(47, 23);
-            this.btnLoad.TabIndex = 13;
-            this.btnLoad.Text = "Cargar";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(560, 69);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(47, 23);
-            this.btnClear.TabIndex = 14;
-            this.btnClear.Text = "Quitar";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(438, 27);
+            this.label7.Location = new System.Drawing.Point(7, 236);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 13);
             this.label7.TabIndex = 4;
@@ -383,7 +389,7 @@
             // cbxCategory
             // 
             this.cbxCategory.FormattingEnabled = true;
-            this.cbxCategory.Location = new System.Drawing.Point(501, 24);
+            this.cbxCategory.Location = new System.Drawing.Point(116, 233);
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Size = new System.Drawing.Size(146, 21);
             this.cbxCategory.TabIndex = 5;
@@ -393,8 +399,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 371);
-            this.Controls.Add(this.cbxCategory);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Name = "ItemView";
@@ -405,10 +409,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataList)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorInput)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

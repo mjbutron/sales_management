@@ -112,7 +112,7 @@ namespace View
         {
             cbxCategory.DataSource = CategoryController.Show();
             cbxCategory.ValueMember = "id_categoria";
-            cbxCategory.DisplayMember = "Categoria";
+            cbxCategory.DisplayMember = "nombre";
 
         }
 
@@ -159,7 +159,7 @@ namespace View
             try
             {
                 string res = "";
-                if (this.txtCodeitem.Text == string.Empty || this.txtNameitem.Text == string.Empty || this.cbxCategory.Text == string.Empty)
+                if (this.txtCodeitem.Text == string.Empty || this.txtNameitem.Text == string.Empty)
                 {
                     MessageError("Faltan datos obligatorios");
                     errorInput.SetError(txtCodeitem, "Introduzca un valor");
@@ -230,6 +230,83 @@ namespace View
             this.EnableControl(false);
             this.EnableButtons();
             this.ResetForm();
+        }
+
+        private void dataList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataList.Columns["Eliminar"].Index)
+            {
+                DataGridViewCheckBoxCell ChkDelete = (DataGridViewCheckBoxCell)dataList.Rows[e.RowIndex].Cells["Eliminar"];
+                ChkDelete.Value = !Convert.ToBoolean(ChkDelete.Value);
+            }
+        }
+
+        private void dataList_DoubleClick(object sender, EventArgs e)
+        {
+            this.txtIditem.Text = Convert.ToString(this.dataList.CurrentRow.Cells["id_articulo"].Value);
+            this.txtCodeitem.Text = Convert.ToString(this.dataList.CurrentRow.Cells["codigo"].Value);
+            this.txtNameitem.Text = Convert.ToString(this.dataList.CurrentRow.Cells["nombre"].Value);
+            this.txtDescriptionitem.Text = Convert.ToString(this.dataList.CurrentRow.Cells["descripcion"].Value);
+            this.cbxCategory.SelectedValue = Convert.ToString(this.dataList.CurrentRow.Cells["id_categoria"].Value);
+
+            byte[] buffer = (byte[])this.dataList.CurrentRow.Cells["imagen"].Value;
+
+            System.IO.MemoryStream memory = new System.IO.MemoryStream(buffer);
+            this.pbxImage.Image = Image.FromStream(memory);
+            this.pbxImage.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            this.tabControl1.SelectedIndex = 1;
+        }
+
+        private void chkDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkDelete.Checked)
+            {
+                this.dataList.Columns[0].Visible = true;
+                btnDelete.Enabled = true;
+            }
+            else
+            {
+                this.dataList.Columns[0].Visible = false;
+                btnDelete.Enabled = false;
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult sure;
+                sure = MessageBox.Show("¿Estas seguro que desea eliminar los registros?", "Sistema de Ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (sure == DialogResult.OK)
+                {
+                    string IdItem;
+                    string res = "";
+
+                    foreach (DataGridViewRow row in dataList.Rows)
+                    {
+                        if (Convert.ToBoolean(row.Cells[0].Value))
+                        {
+                            IdItem = Convert.ToString(row.Cells[1].Value);
+                            res = ItemController.Delete(Convert.ToInt32(IdItem));
+
+                            if (res.Equals("Correcto"))
+                            {
+                                this.MessageOK("¡Se ha eliminado el registro correctamente!");
+                            }
+                            else
+                            {
+                                this.MessageError(res);
+                            }
+                        }
+                    }
+                    this.ShowData();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
     }
 }

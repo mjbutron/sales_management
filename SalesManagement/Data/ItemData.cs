@@ -156,7 +156,7 @@ namespace Data
                 ParCodeIt.ParameterName = "@codigo";
                 ParCodeIt.SqlDbType = SqlDbType.VarChar;
                 ParCodeIt.Size = 50;
-                ParCodeIt.Value = Item.Name;
+                ParCodeIt.Value = Item.CodeItem;
                 SqlCmd.Parameters.Add(ParCodeIt);
 
                 SqlParameter ParNombreIt = new SqlParameter();
@@ -231,7 +231,7 @@ namespace Data
                 ParCodeIt.ParameterName = "@codigo";
                 ParCodeIt.SqlDbType = SqlDbType.VarChar;
                 ParCodeIt.Size = 50;
-                ParCodeIt.Value = Item.Name;
+                ParCodeIt.Value = Item.CodeItem;
                 SqlCmd.Parameters.Add(ParCodeIt);
 
                 SqlParameter ParNombreIt = new SqlParameter();
@@ -249,7 +249,7 @@ namespace Data
                 SqlCmd.Parameters.Add(ParDescripcionIt);
 
                 SqlParameter ParImageIt = new SqlParameter();
-                ParImageIt.ParameterName = "@image";
+                ParImageIt.ParameterName = "@imagen";
                 ParImageIt.SqlDbType = SqlDbType.Image;
                 ParImageIt.Value = Item.Image;
                 SqlCmd.Parameters.Add(ParImageIt);
