@@ -545,7 +545,7 @@ namespace Data
 
         }
 
-        public DataTable FindByTypeDoc(ProviderData Provider)
+        public DataTable FindByNumDoc(ProviderData Provider)
         {
             DataTable DataTableRes = new DataTable("proveedor");
             SqlConnection SqlCon = new SqlConnection();
