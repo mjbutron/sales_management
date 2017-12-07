@@ -17,6 +17,22 @@ namespace View
         private bool IsNew = false;
         private bool IsEdit = false;
 
+        private static ItemView _Instance;
+
+        public static ItemView GetInstance()
+        {
+            if(_Instance == null)
+            {
+                _Instance = new ItemView();
+            }
+            return _Instance;
+        }
+
+        public void setCategory(string idCat, string name)
+        {
+            this.cbxCategory.Text = name;
+        }
+
         public ItemView()
         {
             InitializeComponent();
