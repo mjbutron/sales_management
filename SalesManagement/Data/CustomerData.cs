@@ -171,14 +171,14 @@ namespace Data
         #region Constructor
         public CustomerData() { }
 
-        public CustomerData(int idCus, string name, string lastName, string sex, DateTime birthdate, string typDoc, string numDoc, string address, string phone, string email, string text)
+        public CustomerData(int idCus, string name, string lastName, string sex, DateTime birthdate, string typeDoc, string numDoc, string address, string phone, string email, string text)
         {
             this.IdCustomer = idCus;
             this.Name = name;
             this.LastName = lastName;
             this.Sex = sex;
             this.Birthdate = birthdate;
-            this.TypeDoc = typDoc;
+            this.TypeDoc = typeDoc;
             this.NumDoc = numDoc;
             this.Address = address;
             this.Phone = phone;

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CategoryController.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="CustomerController.cs" />
     <Compile Include="ItemController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProviderController.cs" />
