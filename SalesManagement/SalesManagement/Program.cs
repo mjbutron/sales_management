@@ -17,7 +17,7 @@ namespace SalesManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomerView());
+            Application.Run(new EmployeeView());
         }
     }
 }

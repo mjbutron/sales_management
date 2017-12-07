@@ -11,17 +11,18 @@ using Business;
 
 namespace View
 {
-    public partial class CustomerView : Form
+    public partial class EmployeeView : Form
     {
         private bool IsNew = false;
         private bool IsEdit = false;
 
-        public CustomerView()
+        public EmployeeView()
         {
             InitializeComponent();
             btnDelete.Enabled = false;
-            this.tltMessage.SetToolTip(this.txtName, "Ingrese el nombre");
-            this.tltMessage.SetToolTip(this.txtNumdoc, "Ingrese el numero de documento");
+            this.tltMessage.SetToolTip(this.txtNumdoc, "Ingrese el numero de documento (DNI)");
+            this.tltMessage.SetToolTip(this.txtUser, "Ingrese el nombre de usuario de acceso");
+            this.tltMessage.SetToolTip(this.txtUser, "Ingrese la contraseña para el acceso");
         }
 
         private void MessageOK(string message)
@@ -36,27 +37,31 @@ namespace View
 
         private void ResetForm()
         {
-            this.txtIdcustomer.Text = string.Empty;
+            this.txtIdemployee.Text = string.Empty;
             this.txtName.Text = string.Empty;
             this.txtLastname.Text = string.Empty;
             this.txtNumdoc.Text = string.Empty;
             this.txtAddress.Text = string.Empty;
             this.txtPhone.Text = string.Empty;
             this.txtEmail.Text = string.Empty;
+            this.txtUser.Text = string.Empty;
+            this.txtPass.Text = string.Empty;
         }
 
         private void EnableControl(bool value)
         {
-            this.txtIdcustomer.ReadOnly = !value;
+            this.txtIdemployee.ReadOnly = !value;
             this.txtName.ReadOnly = !value;
             this.txtLastname.ReadOnly = !value;
             this.cbxSex.Enabled = value;
             this.dtpDate.Enabled = value;
-            this.cbxTypedoc.Enabled = value;
             this.txtNumdoc.ReadOnly = !value;
             this.txtAddress.ReadOnly = !value;
             this.txtPhone.ReadOnly = !value;
             this.txtEmail.ReadOnly = !value;
+            this.cbxRol.Enabled = value;
+            this.txtUser.ReadOnly = !value;
+            this.txtPass.ReadOnly = !value;
         }
 
         private void EnableButtons()
@@ -87,26 +92,26 @@ namespace View
 
         private void ShowData()
         {
-            this.dataList.DataSource = CustomerController.Show();
+            this.dataList.DataSource = EmployeeController.Show();
             this.HiddenColums();
             lblTotal.Text = "Total de regitros: " + Convert.ToString(dataList.Rows.Count);
         }
 
         private void FindLastName()
         {
-            this.dataList.DataSource = CustomerController.FindByLastName(this.txtFindtext.Text);
+            this.dataList.DataSource = EmployeeController.FindByLastName(this.txtFindtext.Text);
             this.HiddenColums();
             lblTotal.Text = "Total de regitros: " + Convert.ToString(dataList.Rows.Count);
         }
 
         private void FindNumDoc()
         {
-            this.dataList.DataSource = CustomerController.FindByNumDoc(this.txtFindtext.Text);
+            this.dataList.DataSource = EmployeeController.FindByNumDoc(this.txtFindtext.Text);
             this.HiddenColums();
             lblTotal.Text = "Total de regitros: " + Convert.ToString(dataList.Rows.Count);
         }
 
-        private void CustomerView_Load(object sender, EventArgs e)
+        private void EmployeeView_Load(object sender, EventArgs e)
         {
             this.Top = 0;
             this.Left = 0;
@@ -135,15 +140,15 @@ namespace View
                 sure = MessageBox.Show("¿Estas seguro que desea eliminar los registros?", "Sistema de Ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (sure == DialogResult.OK)
                 {
-                    string IdCus;
+                    string IdEmp;
                     string res = "";
 
                     foreach (DataGridViewRow row in dataList.Rows)
                     {
                         if (Convert.ToBoolean(row.Cells[0].Value))
                         {
-                            IdCus = Convert.ToString(row.Cells[1].Value);
-                            res = CustomerController.Delete(Convert.ToInt32(IdCus));
+                            IdEmp = Convert.ToString(row.Cells[1].Value);
+                            res = EmployeeController.Delete(Convert.ToInt32(IdEmp));
 
                             if (res.Equals("Correcto"))
                             {
@@ -189,16 +194,18 @@ namespace View
 
         private void dataList_DoubleClick(object sender, EventArgs e)
         {
-            this.txtIdcustomer.Text = Convert.ToString(this.dataList.CurrentRow.Cells["id_cliente"].Value);
+            this.txtIdemployee.Text = Convert.ToString(this.dataList.CurrentRow.Cells["id_empleado"].Value);
             this.txtName.Text = Convert.ToString(this.dataList.CurrentRow.Cells["nombre"].Value);
             this.txtLastname.Text = Convert.ToString(this.dataList.CurrentRow.Cells["apellidos"].Value);
             this.cbxSex.Text = Convert.ToString(this.dataList.CurrentRow.Cells["sexo"].Value);
             this.dtpDate.Value = Convert.ToDateTime(this.dataList.CurrentRow.Cells["fecha_nacimiento"].Value);
-            this.cbxTypedoc.Text = Convert.ToString(this.dataList.CurrentRow.Cells["tipo_documento"].Value);
-            this.txtNumdoc.Text = Convert.ToString(this.dataList.CurrentRow.Cells["num_documento"].Value);
+            this.txtNumdoc.Text = Convert.ToString(this.dataList.CurrentRow.Cells["dni"].Value);
             this.txtAddress.Text = Convert.ToString(this.dataList.CurrentRow.Cells["direccion"].Value);
-            this.txtPhone.Text = Convert.ToString(this.dataList.CurrentRow.Cells["telefono"].Value);    
+            this.txtPhone.Text = Convert.ToString(this.dataList.CurrentRow.Cells["telefono"].Value);
             this.txtEmail.Text = Convert.ToString(this.dataList.CurrentRow.Cells["email"].Value);
+            this.cbxRol.Text = Convert.ToString(this.dataList.CurrentRow.Cells["rol"].Value);
+            this.txtUser.Text = Convert.ToString(this.dataList.CurrentRow.Cells["usuario"].Value);
+            this.txtPass.Text = Convert.ToString(this.dataList.CurrentRow.Cells["password"].Value);
 
             this.tabControl1.SelectedIndex = 1;
         }
@@ -218,21 +225,24 @@ namespace View
             try
             {
                 string res = "";
-                if (this.txtName.Text == string.Empty || this.txtNumdoc.Text == string.Empty)
+                if (this.txtName.Text == string.Empty || this.txtLastname.Text == string.Empty || this.txtNumdoc.Text == string.Empty || this.txtUser.Text == string.Empty || this.txtPass.Text == string.Empty)
                 {
                     MessageError("Faltan datos obligatorios");
                     errorInput.SetError(txtName, "Introduzca un valor");
+                    errorInput.SetError(txtLastname, "Introduzca un valor");
                     errorInput.SetError(txtNumdoc, "Introduzca un valor");
+                    errorInput.SetError(txtUser, "Introduzca un valor");
+                    errorInput.SetError(txtPass, "Introduzca un valor");
                 }
                 else
                 {
                     if (this.IsNew)
                     {
-                        res = CustomerController.Insert(this.txtName.Text.Trim(), this.txtLastname.Text.Trim(), this.cbxSex.Text, this.dtpDate.Value, this.cbxTypedoc.Text, this.txtNumdoc.Text, this.txtAddress.Text, this.txtPhone.Text, this.txtEmail.Text);
+                        res = EmployeeController.Insert(this.txtName.Text.Trim(), this.txtLastname.Text.Trim(), this.cbxSex.Text, this.dtpDate.Value, this.txtNumdoc.Text, this.txtAddress.Text, this.txtPhone.Text, this.txtEmail.Text, this.cbxRol.Text, this.txtUser.Text, this.txtPass.Text);
                     }
                     else
                     {
-                        res = CustomerController.Edit(Convert.ToInt32(this.txtIdcustomer.Text), this.txtName.Text.Trim(), this.txtLastname.Text.Trim(), this.cbxSex.Text, this.dtpDate.Value, this.cbxTypedoc.Text, this.txtNumdoc.Text, this.txtAddress.Text, this.txtPhone.Text, this.txtEmail.Text);
+                        res = EmployeeController.Edit(Convert.ToInt32(this.txtIdemployee.Text), this.txtName.Text.Trim(), this.txtLastname.Text.Trim(), this.cbxSex.Text, this.dtpDate.Value, this.txtNumdoc.Text, this.txtAddress.Text, this.txtPhone.Text, this.txtEmail.Text, this.cbxRol.Text, this.txtUser.Text, this.txtPass.Text);
                     }
                     if (res.Equals("Correcto"))
                     {
@@ -262,9 +272,10 @@ namespace View
             }
         }
 
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (!this.txtIdcustomer.Text.Equals(""))
+            if (!this.txtIdemployee.Text.Equals(""))
             {
                 this.IsEdit = true;
                 this.EnableButtons();

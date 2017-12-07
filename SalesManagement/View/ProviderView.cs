@@ -139,15 +139,15 @@ namespace View
                 sure = MessageBox.Show("¿Estas seguro que desea eliminar los registros?", "Sistema de Ventas", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (sure == DialogResult.OK)
                 {
-                    string IdCat;
+                    string IdPro;
                     string res = "";
 
                     foreach (DataGridViewRow row in dataList.Rows)
                     {
                         if (Convert.ToBoolean(row.Cells[0].Value))
                         {
-                            IdCat = Convert.ToString(row.Cells[1].Value);
-                            res = ProviderController.Delete(Convert.ToInt32(IdCat));
+                            IdPro = Convert.ToString(row.Cells[1].Value);
+                            res = ProviderController.Delete(Convert.ToInt32(IdPro));
 
                             if (res.Equals("Correcto"))
                             {
