@@ -16,5 +16,22 @@ namespace SalesManagement
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.panel2.Height = button1.Height;
+            this.panel2.Top = button1.Top;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.panel2.Height = button2.Height;
+            this.panel2.Top = button2.Top;
+        }
     }
 }
