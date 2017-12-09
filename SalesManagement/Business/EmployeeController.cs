@@ -73,6 +73,14 @@ namespace Business
             DEmployee.FindText = text;
             return DEmployee.FindByNumDoc(DEmployee);
         }
+
+        public static DataTable Login(string user, string pass)
+        {
+            EmployeeData DEmployee = new EmployeeData();
+            DEmployee.User = user;
+            DEmployee.Pass = pass;
+            return DEmployee.Login(DEmployee);
+        }
         #endregion
     }
 }

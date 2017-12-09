@@ -19,19 +19,32 @@ namespace SalesManagement
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.BackColor = Color.FromArgb(99, 121, 255);
+            this.panel6.BackColor = Color.FromArgb(99, 121, 255);
+            this.panel7.Height = panel5.Height;
+            this.panel7.Top = panel5.Top;
+        }
+
+        private void textBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.panel5.BackColor = SystemColors.InactiveCaption;
+            this.panel6.BackColor = SystemColors.Control;
+            this.panel7.Height = panel5.Height;
+            this.panel7.Top = panel5.Top;
+        }
+
+        private void textBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.panel5.BackColor = SystemColors.Control;
+            this.panel6.BackColor = SystemColors.InactiveCaption;
+            this.panel7.Height = panel6.Height;
+            this.panel7.Top = panel6.Top;
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            this.panel2.Height = button1.Height;
-            this.panel2.Top = button1.Top;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.panel2.Height = button2.Height;
-            this.panel2.Top = button2.Top;
+            Application.Exit();
         }
     }
 }

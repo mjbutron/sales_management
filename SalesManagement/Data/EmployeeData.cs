@@ -611,6 +611,54 @@ namespace Data
             return DataTableRes;
 
         }
+
+        public DataTable Login(EmployeeData Employee)
+        {
+            DataTable DataTableRes = new DataTable("empleado");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Connection.Con;
+                SqlCon.Open();
+
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "plogin";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParUser = new SqlParameter();
+                ParUser.ParameterName = "@usuario";
+                ParUser.SqlDbType = SqlDbType.VarChar;
+                ParUser.Size = 50;
+                ParUser.Value = Employee.User;
+                SqlCmd.Parameters.Add(ParUser);
+
+                SqlParameter ParPass = new SqlParameter();
+                ParPass.ParameterName = "@password";
+                ParPass.SqlDbType = SqlDbType.VarChar;
+                ParPass.Size = 50;
+                ParPass.Value = Employee.Pass;
+                SqlCmd.Parameters.Add(ParPass);
+
+                SqlDataAdapter SqlAdapter = new SqlDataAdapter(SqlCmd);
+                SqlAdapter.Fill(DataTableRes);
+            }
+            catch (Exception e)
+            {
+                DataTableRes = null;
+                Console.WriteLine(e);
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                {
+                    SqlCon.Close();
+                }
+            }
+
+            return DataTableRes;
+
+        }
         #endregion
     }
 }

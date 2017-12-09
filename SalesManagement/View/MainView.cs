@@ -14,6 +14,11 @@ namespace View
     {
         private int childFormNumber = 0;
 
+        public string IdEmployee = "";
+        public string NameEmployee = "";
+        public string LastNameEmployee = "";
+        public string RolEmployee = "";
+
         public MainView()
         {
             InitializeComponent();
@@ -142,6 +147,59 @@ namespace View
             EmployeeView employeeView = new EmployeeView();
             employeeView.MdiParent = this;
             employeeView.Show();
+        }
+
+        private void MainView_Load(object sender, EventArgs e)
+        {
+            ControlUsers();
+        }
+
+        private void ControlUsers()
+        {
+            if (RolEmployee.Equals("Administrador"))
+            {
+                this.mspStore.Enabled = true;
+                this.mspSales.Enabled = true;
+                this.mspShopping.Enabled = true;
+                this.mspManagement.Enabled = true;
+                this.mspReport.Enabled = true;
+                this.mspTools.Enabled = true;
+                this.tspSales.Enabled = true;
+                this.tspShopping.Enabled = true;
+            }
+            else if (RolEmployee.Equals("Vendedor"))
+            {
+                this.mspStore.Enabled = false;
+                this.mspSales.Enabled = true;
+                this.mspShopping.Enabled = false;
+                this.mspManagement.Enabled = false;
+                this.mspReport.Enabled = true;
+                this.mspTools.Enabled = true;
+                this.tspSales.Enabled = true;
+                this.tspShopping.Enabled = false;
+            }
+            else if (RolEmployee.Equals("Almacén"))
+            {
+                this.mspStore.Enabled = true;
+                this.mspSales.Enabled = false;
+                this.mspShopping.Enabled = true;
+                this.mspManagement.Enabled = false;
+                this.mspReport.Enabled = true;
+                this.mspTools.Enabled = true;
+                this.tspSales.Enabled = false;
+                this.tspShopping.Enabled = true;
+            }
+            else
+            {
+                this.mspStore.Enabled = false;
+                this.mspSales.Enabled = false;
+                this.mspShopping.Enabled = false;
+                this.mspManagement.Enabled = false;
+                this.mspReport.Enabled = false;
+                this.mspTools.Enabled = false;
+                this.tspSales.Enabled = false;
+                this.tspShopping.Enabled = false;
+            }
         }
     }
 }

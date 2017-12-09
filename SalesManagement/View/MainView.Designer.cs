@@ -258,7 +258,7 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -274,13 +274,13 @@
             // ventasToolStripMenuItem1
             // 
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.ventasToolStripMenuItem1.Text = "Ventas";
             // 
             // tsiCustomer
             // 
             this.tsiCustomer.Name = "tsiCustomer";
-            this.tsiCustomer.Size = new System.Drawing.Size(152, 22);
+            this.tsiCustomer.Size = new System.Drawing.Size(116, 22);
             this.tsiCustomer.Text = "Clientes";
             this.tsiCustomer.Click += new System.EventHandler(this.tsiCustomer_Click);
             // 
@@ -296,13 +296,13 @@
             // ingresosToolStripMenuItem
             // 
             this.ingresosToolStripMenuItem.Name = "ingresosToolStripMenuItem";
-            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.ingresosToolStripMenuItem.Text = "Ingresos";
             // 
             // tsiProvider
             // 
             this.tsiProvider.Name = "tsiProvider";
-            this.tsiProvider.Size = new System.Drawing.Size(152, 22);
+            this.tsiProvider.Size = new System.Drawing.Size(139, 22);
             this.tsiProvider.Text = "Proveedores";
             this.tsiProvider.Click += new System.EventHandler(this.tsiProvider_Click);
             // 
@@ -317,7 +317,7 @@
             // tsiEmployee
             // 
             this.tsiEmployee.Name = "tsiEmployee";
-            this.tsiEmployee.Size = new System.Drawing.Size(152, 22);
+            this.tsiEmployee.Size = new System.Drawing.Size(132, 22);
             this.tsiEmployee.Text = "Empleados";
             this.tsiEmployee.Click += new System.EventHandler(this.tsiEmployee_Click);
             // 
@@ -333,14 +333,14 @@
             // tsiCategory
             // 
             this.tsiCategory.Name = "tsiCategory";
-            this.tsiCategory.Size = new System.Drawing.Size(152, 22);
+            this.tsiCategory.Size = new System.Drawing.Size(130, 22);
             this.tsiCategory.Text = "Categorías";
             this.tsiCategory.Click += new System.EventHandler(this.tsiCategory_Click);
             // 
             // tsiItem
             // 
             this.tsiItem.Name = "tsiItem";
-            this.tsiItem.Size = new System.Drawing.Size(152, 22);
+            this.tsiItem.Size = new System.Drawing.Size(130, 22);
             this.tsiItem.Text = "Artículos";
             this.tsiItem.Click += new System.EventHandler(this.tsiItem_Click);
             // 
@@ -414,6 +414,7 @@
             this.Name = "MainView";
             this.Text = "*** Software de ventas ***";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainView_Load);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
