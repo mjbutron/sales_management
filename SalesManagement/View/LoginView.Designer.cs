@@ -35,8 +35,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.txtUser = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -106,6 +106,14 @@
             this.panel5.Size = new System.Drawing.Size(334, 58);
             this.panel5.TabIndex = 5;
             // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(64, 19);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(201, 20);
+            this.txtUser.TabIndex = 0;
+            this.txtUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUser_MouseClick);
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Lavender;
@@ -115,14 +123,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(334, 58);
             this.panel6.TabIndex = 6;
-            // 
-            // txtUser
-            // 
-            this.txtUser.Location = new System.Drawing.Point(64, 19);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(201, 20);
-            this.txtUser.TabIndex = 0;
-            this.txtUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUser_MouseClick);
             // 
             // txtPass
             // 
@@ -193,7 +193,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 12);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Gestión de Ventas. TFG 17 ";
+            this.label1.Text = "Gestión de Ventas. TFG 2018 ";
             // 
             // LoginView
             // 

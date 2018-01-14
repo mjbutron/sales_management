@@ -106,19 +106,19 @@ namespace Data
                 ParId.Direction = ParameterDirection.Output;
                 SqlCmd.Parameters.Add(ParId);
 
-                SqlParameter ParNombreCat = new SqlParameter();
-                ParNombreCat.ParameterName = "@nombre";
-                ParNombreCat.SqlDbType = SqlDbType.VarChar;
-                ParNombreCat.Size = 50;
-                ParNombreCat.Value = Category.Name;
-                SqlCmd.Parameters.Add(ParNombreCat);
+                SqlParameter ParNameCat = new SqlParameter();
+                ParNameCat.ParameterName = "@nombre";
+                ParNameCat.SqlDbType = SqlDbType.VarChar;
+                ParNameCat.Size = 50;
+                ParNameCat.Value = Category.Name;
+                SqlCmd.Parameters.Add(ParNameCat);
 
-                SqlParameter ParDescripcionCat = new SqlParameter();
-                ParDescripcionCat.ParameterName = "@descripcion";
-                ParDescripcionCat.SqlDbType = SqlDbType.VarChar;
-                ParDescripcionCat.Size = 512;
-                ParDescripcionCat.Value = Category.Description;
-                SqlCmd.Parameters.Add(ParDescripcionCat);
+                SqlParameter ParDescriptionCat = new SqlParameter();
+                ParDescriptionCat.ParameterName = "@descripcion";
+                ParDescriptionCat.SqlDbType = SqlDbType.VarChar;
+                ParDescriptionCat.Size = 512;
+                ParDescriptionCat.Value = Category.Description;
+                SqlCmd.Parameters.Add(ParDescriptionCat);
 
                 // Execute
                 res = SqlCmd.ExecuteNonQuery() == 1 ? "Correcto" : "No se ha podido insertar el registro";
@@ -162,19 +162,19 @@ namespace Data
                 ParId.Value = Category.IdCategory;
                 SqlCmd.Parameters.Add(ParId);
 
-                SqlParameter ParNombreCat = new SqlParameter();
-                ParNombreCat.ParameterName = "@nombre";
-                ParNombreCat.SqlDbType = SqlDbType.VarChar;
-                ParNombreCat.Size = 50;
-                ParNombreCat.Value = Category.Name;
-                SqlCmd.Parameters.Add(ParNombreCat);
+                SqlParameter ParNameCat = new SqlParameter();
+                ParNameCat.ParameterName = "@nombre";
+                ParNameCat.SqlDbType = SqlDbType.VarChar;
+                ParNameCat.Size = 50;
+                ParNameCat.Value = Category.Name;
+                SqlCmd.Parameters.Add(ParNameCat);
 
-                SqlParameter ParDescripcionCat = new SqlParameter();
-                ParDescripcionCat.ParameterName = "@descripcion";
-                ParDescripcionCat.SqlDbType = SqlDbType.VarChar;
-                ParDescripcionCat.Size = 512;
-                ParDescripcionCat.Value = Category.Description;
-                SqlCmd.Parameters.Add(ParDescripcionCat);
+                SqlParameter ParDescriptionCat = new SqlParameter();
+                ParDescriptionCat.ParameterName = "@descripcion";
+                ParDescriptionCat.SqlDbType = SqlDbType.VarChar;
+                ParDescriptionCat.Size = 512;
+                ParDescriptionCat.Value = Category.Description;
+                SqlCmd.Parameters.Add(ParDescriptionCat);
 
                 // Execute
                 res = SqlCmd.ExecuteNonQuery() == 1 ? "Correcto" : "No se ha podido modificar el registro";

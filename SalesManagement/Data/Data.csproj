@@ -45,6 +45,8 @@
     <Compile Include="Connection.cs" />
     <Compile Include="CustomerData.cs" />
     <Compile Include="EmployeeData.cs" />
+    <Compile Include="EntryData.cs" />
+    <Compile Include="EntryDetailData.cs" />
     <Compile Include="ItemData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProviderData.cs" />

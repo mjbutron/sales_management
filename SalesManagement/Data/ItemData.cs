@@ -159,19 +159,19 @@ namespace Data
                 ParCodeIt.Value = Item.CodeItem;
                 SqlCmd.Parameters.Add(ParCodeIt);
 
-                SqlParameter ParNombreIt = new SqlParameter();
-                ParNombreIt.ParameterName = "@nombre";
-                ParNombreIt.SqlDbType = SqlDbType.VarChar;
-                ParNombreIt.Size = 50;
-                ParNombreIt.Value = Item.Name;
-                SqlCmd.Parameters.Add(ParNombreIt);
+                SqlParameter ParNameIt = new SqlParameter();
+                ParNameIt.ParameterName = "@nombre";
+                ParNameIt.SqlDbType = SqlDbType.VarChar;
+                ParNameIt.Size = 50;
+                ParNameIt.Value = Item.Name;
+                SqlCmd.Parameters.Add(ParNameIt);
 
-                SqlParameter ParDescripcionIt = new SqlParameter();
-                ParDescripcionIt.ParameterName = "@descripcion";
-                ParDescripcionIt.SqlDbType = SqlDbType.VarChar;
-                ParDescripcionIt.Size = 512;
-                ParDescripcionIt.Value = Item.Description;
-                SqlCmd.Parameters.Add(ParDescripcionIt);
+                SqlParameter ParDescriptionIt = new SqlParameter();
+                ParDescriptionIt.ParameterName = "@descripcion";
+                ParDescriptionIt.SqlDbType = SqlDbType.VarChar;
+                ParDescriptionIt.Size = 512;
+                ParDescriptionIt.Value = Item.Description;
+                SqlCmd.Parameters.Add(ParDescriptionIt);
 
                 SqlParameter ParImageIt = new SqlParameter();
                 ParImageIt.ParameterName = "@image";
@@ -234,19 +234,19 @@ namespace Data
                 ParCodeIt.Value = Item.CodeItem;
                 SqlCmd.Parameters.Add(ParCodeIt);
 
-                SqlParameter ParNombreIt = new SqlParameter();
-                ParNombreIt.ParameterName = "@nombre";
-                ParNombreIt.SqlDbType = SqlDbType.VarChar;
-                ParNombreIt.Size = 50;
-                ParNombreIt.Value = Item.Name;
-                SqlCmd.Parameters.Add(ParNombreIt);
+                SqlParameter ParNameIt = new SqlParameter();
+                ParNameIt.ParameterName = "@nombre";
+                ParNameIt.SqlDbType = SqlDbType.VarChar;
+                ParNameIt.Size = 50;
+                ParNameIt.Value = Item.Name;
+                SqlCmd.Parameters.Add(ParNameIt);
 
-                SqlParameter ParDescripcionIt = new SqlParameter();
-                ParDescripcionIt.ParameterName = "@descripcion";
-                ParDescripcionIt.SqlDbType = SqlDbType.VarChar;
-                ParDescripcionIt.Size = 512;
-                ParDescripcionIt.Value = Item.Description;
-                SqlCmd.Parameters.Add(ParDescripcionIt);
+                SqlParameter ParDescriptionIt = new SqlParameter();
+                ParDescriptionIt.ParameterName = "@descripcion";
+                ParDescriptionIt.SqlDbType = SqlDbType.VarChar;
+                ParDescriptionIt.Size = 512;
+                ParDescriptionIt.Value = Item.Description;
+                SqlCmd.Parameters.Add(ParDescriptionIt);
 
                 SqlParameter ParImageIt = new SqlParameter();
                 ParImageIt.ParameterName = "@imagen";
