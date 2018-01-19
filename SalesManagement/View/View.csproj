@@ -67,6 +67,12 @@
     <Compile Include="EntryView.Designer.cs">
       <DependentUpon>EntryView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemEntryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemEntryView.Designer.cs">
+      <DependentUpon>ItemEntryView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EntryView.resx">
       <DependentUpon>EntryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemEntryView.resx">
+      <DependentUpon>ItemEntryView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemView.resx">
       <DependentUpon>ItemView.cs</DependentUpon>

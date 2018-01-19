@@ -201,5 +201,13 @@ namespace View
                 this.tspShopping.Enabled = false;
             }
         }
+
+        private void ingresosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EntryView entryView = EntryView.GetInstance();
+            entryView.MdiParent = this;
+            entryView.Show();
+            entryView.IdEmployee = Convert.ToInt32(this.IdEmployee);
+        }
     }
 }

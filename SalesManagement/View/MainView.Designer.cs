@@ -296,13 +296,14 @@
             // ingresosToolStripMenuItem
             // 
             this.ingresosToolStripMenuItem.Name = "ingresosToolStripMenuItem";
-            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ingresosToolStripMenuItem.Text = "Ingresos";
+            this.ingresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosToolStripMenuItem_Click);
             // 
             // tsiProvider
             // 
             this.tsiProvider.Name = "tsiProvider";
-            this.tsiProvider.Size = new System.Drawing.Size(139, 22);
+            this.tsiProvider.Size = new System.Drawing.Size(152, 22);
             this.tsiProvider.Text = "Proveedores";
             this.tsiProvider.Click += new System.EventHandler(this.tsiProvider_Click);
             // 
