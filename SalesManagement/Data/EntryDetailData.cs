@@ -15,7 +15,7 @@ namespace Data
         private decimal _PriceSale;
         private int _StockIni;
         private int _StockCurrent;
-        private DateTime DateProduction;
+        private DateTime _Fecha;
         private int _IdEntry;
         private int _IdItem;
 
@@ -110,6 +110,19 @@ namespace Data
                 _IdItem = value;
             }
         }
+
+        public DateTime Fecha
+        {
+            get
+            {
+                return _Fecha;
+            }
+
+            set
+            {
+                _Fecha = value;
+            }
+        }
         #endregion
 
         #region Constructor
@@ -122,7 +135,7 @@ namespace Data
             this.PriceSale = priceSale;
             this.StockIni = stockIni;
             this.StockCurrent = stockCurrent;
-            this.DateProduction = dateProduction;
+            this.Fecha = dateProduction;
             this.IdEntry = idEntry;
             this.IdItem = idItem;
         }
@@ -187,7 +200,7 @@ namespace Data
                 SqlParameter ParDateProd = new SqlParameter();
                 ParDateProd.ParameterName = "@fecha_produccion";
                 ParDateProd.SqlDbType = SqlDbType.Date;
-                ParDateProd.Value = EntryDetail.DateProduction;
+                ParDateProd.Value = EntryDetail.Fecha;
                 SqlCmd.Parameters.Add(ParDateProd);
 
                 // Execute
