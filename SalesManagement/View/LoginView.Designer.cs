@@ -191,9 +191,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.label1.Location = new System.Drawing.Point(13, 243);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 12);
+            this.label1.Size = new System.Drawing.Size(107, 12);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Gestión de Ventas. TFG 2018 ";
+            this.label1.Text = "Gestión de Ventas - v1.0";
             // 
             // LoginView
             // 
