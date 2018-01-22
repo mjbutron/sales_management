@@ -274,13 +274,14 @@
             // ventasToolStripMenuItem1
             // 
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.ventasToolStripMenuItem1.Text = "Ventas";
+            this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.ventasToolStripMenuItem1_Click);
             // 
             // tsiCustomer
             // 
             this.tsiCustomer.Name = "tsiCustomer";
-            this.tsiCustomer.Size = new System.Drawing.Size(116, 22);
+            this.tsiCustomer.Size = new System.Drawing.Size(152, 22);
             this.tsiCustomer.Text = "Clientes";
             this.tsiCustomer.Click += new System.EventHandler(this.tsiCustomer_Click);
             // 
@@ -296,14 +297,14 @@
             // ingresosToolStripMenuItem
             // 
             this.ingresosToolStripMenuItem.Name = "ingresosToolStripMenuItem";
-            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.ingresosToolStripMenuItem.Text = "Ingresos";
             this.ingresosToolStripMenuItem.Click += new System.EventHandler(this.ingresosToolStripMenuItem_Click);
             // 
             // tsiProvider
             // 
             this.tsiProvider.Name = "tsiProvider";
-            this.tsiProvider.Size = new System.Drawing.Size(152, 22);
+            this.tsiProvider.Size = new System.Drawing.Size(139, 22);
             this.tsiProvider.Text = "Proveedores";
             this.tsiProvider.Click += new System.EventHandler(this.tsiProvider_Click);
             // 

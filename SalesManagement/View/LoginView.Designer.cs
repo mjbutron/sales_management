@@ -98,7 +98,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Lavender;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(133)))), ((int)(((byte)(159)))));
             this.panel5.Controls.Add(this.txtUser);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(5, 81);
@@ -108,7 +108,7 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(64, 19);
+            this.txtUser.Location = new System.Drawing.Point(67, 19);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(201, 20);
             this.txtUser.TabIndex = 0;
@@ -116,7 +116,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.Lavender;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(133)))), ((int)(((byte)(159)))));
             this.panel6.Controls.Add(this.txtPass);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(5, 139);
@@ -177,8 +177,8 @@
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
-            this.lblMessage.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblMessage.Location = new System.Drawing.Point(12, 223);
+            this.lblMessage.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblMessage.Location = new System.Drawing.Point(12, 218);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(50, 13);
             this.lblMessage.TabIndex = 2;
@@ -199,6 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(79)))), ((int)(((byte)(112)))));
             this.ClientSize = new System.Drawing.Size(344, 264);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblDate);

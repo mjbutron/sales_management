@@ -42,7 +42,7 @@
             // 
             this.progressBar.Location = new System.Drawing.Point(12, 146);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(376, 10);
+            this.progressBar.Size = new System.Drawing.Size(376, 5);
             this.progressBar.TabIndex = 0;
             // 
             // timer1
@@ -73,7 +73,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(224)))), ((int)(((byte)(231)))));
-            this.label3.Location = new System.Drawing.Point(115, 92);
+            this.label3.Location = new System.Drawing.Point(115, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(171, 13);
             this.label3.TabIndex = 3;

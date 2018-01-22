@@ -49,6 +49,12 @@
       <DependentUpon>CategoryView.cs</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="CustomerSaleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerSaleView.Designer.cs">
+      <DependentUpon>CustomerSaleView.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,12 @@
     </Compile>
     <Compile Include="ItemEntryView.Designer.cs">
       <DependentUpon>ItemEntryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemSaleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemSaleView.Designer.cs">
+      <DependentUpon>ItemSaleView.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemView.cs">
       <SubType>Form</SubType>
@@ -109,6 +121,12 @@
     <Compile Include="ProviderView.Designer.cs">
       <DependentUpon>ProviderView.cs</DependentUpon>
     </Compile>
+    <Compile Include="SaleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleView.Designer.cs">
+      <DependentUpon>SaleView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">
@@ -119,6 +137,9 @@
   <ItemGroup>
     <EmbeddedResource Include="CategoryView.resx">
       <DependentUpon>CategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerSaleView.resx">
+      <DependentUpon>CustomerSaleView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerView.resx">
       <DependentUpon>CustomerView.cs</DependentUpon>
@@ -131,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItemEntryView.resx">
       <DependentUpon>ItemEntryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemSaleView.resx">
+      <DependentUpon>ItemSaleView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemView.resx">
       <DependentUpon>ItemView.cs</DependentUpon>
@@ -150,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProviderView.resx">
       <DependentUpon>ProviderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleView.resx">
+      <DependentUpon>SaleView.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

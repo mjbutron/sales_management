@@ -209,5 +209,13 @@ namespace View
             entryView.Show();
             entryView.IdEmployee = Convert.ToInt32(this.IdEmployee);
         }
+
+        private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            SaleView saleView = SaleView.GetInstance();
+            saleView.MdiParent = this;
+            saleView.Show();
+            saleView.IdEmployee = Convert.ToInt32(this.IdEmployee);
+        }
     }
 }
