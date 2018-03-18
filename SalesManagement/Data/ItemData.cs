@@ -395,6 +395,40 @@ namespace Data
             return DataTableRes;
 
         }
+
+        public DataTable StockItems()
+        {
+            DataTable DataTableRes = new DataTable("articulo");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Connection.Con;
+                SqlCon.Open();
+
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "pstock_articulos";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter SqlAdapter = new SqlDataAdapter(SqlCmd);
+                SqlAdapter.Fill(DataTableRes);
+            }
+            catch (Exception e)
+            {
+                DataTableRes = null;
+                Console.WriteLine(e);
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                {
+                    SqlCon.Close();
+                }
+            }
+
+            return DataTableRes;
+
+        }
         #endregion
     }
 }

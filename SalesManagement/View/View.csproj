@@ -134,6 +134,12 @@
     <Compile Include="ProviderView.Designer.cs">
       <DependentUpon>ProviderView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Querys\QueryStockItemsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Querys\QueryStockItemsView.Designer.cs">
+      <DependentUpon>QueryStockItemsView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reporting\ReportView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProviderView.resx">
       <DependentUpon>ProviderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Querys\QueryStockItemsView.resx">
+      <DependentUpon>QueryStockItemsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reporting\InvoiceReport.rdlc" />
     <EmbeddedResource Include="Reporting\ReportView.resx">

@@ -217,5 +217,12 @@ namespace View
             saleView.Show();
             saleView.IdEmployee = Convert.ToInt32(this.IdEmployee);
         }
+
+        private void stockDeArtículosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Querys.QueryStockItemsView qStockItem = new Querys.QueryStockItemsView();
+            qStockItem.MdiParent = this;
+            qStockItem.Show();
+        }
     }
 }

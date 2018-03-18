@@ -134,7 +134,7 @@
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.backupToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.optionsToolStripMenuItem.Text = "&Base de datos";
             // 
             // backupToolStripMenuItem
@@ -274,14 +274,14 @@
             // ventasToolStripMenuItem1
             // 
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.ventasToolStripMenuItem1.Text = "Ventas";
             this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.ventasToolStripMenuItem1_Click);
             // 
             // tsiCustomer
             // 
             this.tsiCustomer.Name = "tsiCustomer";
-            this.tsiCustomer.Size = new System.Drawing.Size(152, 22);
+            this.tsiCustomer.Size = new System.Drawing.Size(116, 22);
             this.tsiCustomer.Text = "Clientes";
             this.tsiCustomer.Click += new System.EventHandler(this.tsiCustomer_Click);
             // 
@@ -367,6 +367,7 @@
             this.stockDeArtículosToolStripMenuItem.Name = "stockDeArtículosToolStripMenuItem";
             this.stockDeArtículosToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.stockDeArtículosToolStripMenuItem.Text = "Stock de artículos";
+            this.stockDeArtículosToolStripMenuItem.Click += new System.EventHandler(this.stockDeArtículosToolStripMenuItem_Click);
             // 
             // comprasFechaToolStripMenuItem
             // 

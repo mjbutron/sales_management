@@ -52,6 +52,11 @@ namespace Business
             DItem.FindText = text;
             return DItem.FindByName(DItem);
         }
+
+        public static DataTable StockItems()
+        {
+            return new ItemData().StockItems();
+        }
         #endregion
     }
 }
