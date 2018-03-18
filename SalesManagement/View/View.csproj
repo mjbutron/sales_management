@@ -30,9 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -60,6 +63,11 @@
     </Compile>
     <Compile Include="CustomerView.Designer.cs">
       <DependentUpon>CustomerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DsMain.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsMain.xsd</DependentUpon>
     </Compile>
     <Compile Include="EmployeeView.cs">
       <SubType>Form</SubType>
@@ -115,11 +123,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="ProviderView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ProviderView.Designer.cs">
       <DependentUpon>ProviderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\ReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\ReportView.Designer.cs">
+      <DependentUpon>ReportView.cs</DependentUpon>
     </Compile>
     <Compile Include="SaleView.cs">
       <SubType>Form</SubType>
@@ -175,11 +194,31 @@
     <EmbeddedResource Include="ProviderView.resx">
       <DependentUpon>ProviderView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\InvoiceReport.rdlc" />
+    <EmbeddedResource Include="Reporting\ReportView.resx">
+      <DependentUpon>ReportView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SaleView.resx">
       <DependentUpon>SaleView.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DsMain.xsc">
+      <DependentUpon>DsMain.xsd</DependentUpon>
+    </None>
+    <None Include="DsMain.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsMain.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsMain.xss">
+      <DependentUpon>DsMain.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\default-image.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +226,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gearInit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginBg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

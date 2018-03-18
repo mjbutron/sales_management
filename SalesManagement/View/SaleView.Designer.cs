@@ -295,8 +295,9 @@
             this.btnTicket.Name = "btnTicket";
             this.btnTicket.Size = new System.Drawing.Size(75, 23);
             this.btnTicket.TabIndex = 11;
-            this.btnTicket.Text = "&Resguardo";
+            this.btnTicket.Text = "&Factura";
             this.btnTicket.UseVisualStyleBackColor = true;
+            this.btnTicket.Click += new System.EventHandler(this.btnTicket_Click);
             // 
             // label8
             // 
@@ -623,7 +624,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(217, 224, 231);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(224)))), ((int)(((byte)(231)))));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 29);

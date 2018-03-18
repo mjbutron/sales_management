@@ -412,5 +412,12 @@ namespace View
                 MessageError("Debe seleccionar un artículo");
             }
         }
+
+        private void btnTicket_Click(object sender, EventArgs e)
+        {
+            ReportView reportView = new ReportView();
+            reportView.IdVenta = Convert.ToInt32(this.dataList.CurrentRow.Cells["id_venta"].Value);
+            reportView.ShowDialog();
+        }
     }
 }

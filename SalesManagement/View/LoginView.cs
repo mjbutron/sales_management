@@ -22,8 +22,15 @@ namespace View
         {
             lblDate.Text = DateTime.Now.ToString();
             lblMessage.Text = "";
-            lblDate.Parent = pictureBox1;
             lblDate.BackColor = System.Drawing.Color.Transparent;
+            txtUser.Focus();
+
+            Size desktop = System.Windows.Forms.SystemInformation.PrimaryMonitorSize;
+            int wth = (desktop.Width - 300) / 2;
+            int hth = (desktop.Height - 350) / 2;
+            panel5.Location = new Point(wth, hth-40);
+            btnClose.Location = new Point(desktop.Width - 22, 5);
+            lblDate.Location = new Point(desktop.Width - 150, 5);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -38,7 +45,7 @@ namespace View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (this.txtUser.Text.Equals(""))
+           if (this.txtUser.Text.Equals(""))
             {
                 this.txtUser.BackColor = Color.LightCoral;
             }
