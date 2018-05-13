@@ -20,22 +20,7 @@ namespace View
 
         private void LoginView_Load(object sender, EventArgs e)
         {
-            lblDate.Text = DateTime.Now.ToString();
-            lblMessage.Text = "";
-            lblDate.BackColor = System.Drawing.Color.Transparent;
-            txtUser.Focus();
-
-            Size desktop = System.Windows.Forms.SystemInformation.PrimaryMonitorSize;
-            int wth = (desktop.Width - 300) / 2;
-            int hth = (desktop.Height - 350) / 2;
-            panel5.Location = new Point(wth, hth-40);
-            btnClose.Location = new Point(desktop.Width - 22, 5);
-            lblDate.Location = new Point(desktop.Width - 150, 5);
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            lblDate.Text = DateTime.Now.ToString();
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -43,23 +28,67 @@ namespace View
             Application.Exit();
         }
 
+        private void txtUser_Enter(object sender, EventArgs e)
+        {
+            if(txtUser.Text == "USUARIO")
+            {
+                txtUser.Text = "";
+                txtUser.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void txtUser_Leave(object sender, EventArgs e)
+        {
+            if(txtUser.Text == "")
+            {
+                txtUser.Text = "USUARIO";
+                txtUser.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txtPass_Enter(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "CONTRASEÑA")
+            {
+                txtPass.Text = "";
+                txtPass.ForeColor = Color.LightGray;
+                txtPass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtPass_Leave(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "")
+            {
+                txtPass.Text = "CONTRASEÑA";
+                txtPass.ForeColor = Color.DimGray;
+                txtPass.UseSystemPasswordChar = false;
+            }
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           if (this.txtUser.Text.Equals(""))
+            lblErrorLogin.Visible = false;
+            lblErrorUser.Visible = false;
+            lblErrorPass.Visible = false;
+
+            if (this.txtUser.Text.Equals("USUARIO"))
             {
-                this.txtUser.BackColor = Color.LightCoral;
+                lblErrorUser.Visible = true;
             }
-            else if(this.txtPass.Text.Equals("")){
-                this.txtPass.BackColor = Color.LightCoral;
+            else if (this.txtPass.Text.Equals("CONTRASEÑA"))
+            {
+                lblErrorPass.Visible = true;
             }
             else
             {
-                this.txtUser.BackColor = Color.White;
-                this.txtPass.BackColor = Color.White;
                 DataTable dt = EmployeeController.Login(this.txtUser.Text, this.txtPass.Text);
                 if (dt.Rows.Count == 0)
                 {
-                    this.lblMessage.Text = "¡El usuario o la contaseña no son correctos!";
+                    lblErrorLogin.Visible = true;
+                    txtPass.Text = "";
+                    txtPass_Leave(null, e);
+                    txtUser.Focus();
                 }
                 else
                 {
@@ -73,17 +102,7 @@ namespace View
                     this.Hide();
 
                 }
-            }   
-        }
-
-        private void txtUser_MouseClick(object sender, MouseEventArgs e)
-        {
-            this.txtUser.BackColor = SystemColors.Window;
-        }
-
-        private void txtPass_MouseClick(object sender, MouseEventArgs e)
-        {
-            this.txtPass.BackColor = SystemColors.Window;
+            }
         }
     }
 }
