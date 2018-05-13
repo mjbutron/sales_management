@@ -54,10 +54,12 @@ namespace View
             }
             else
             {
+                this.txtUser.BackColor = Color.White;
+                this.txtPass.BackColor = Color.White;
                 DataTable dt = EmployeeController.Login(this.txtUser.Text, this.txtPass.Text);
                 if (dt.Rows.Count == 0)
                 {
-                    this.lblMessage.Text = "El usuario no existe";
+                    this.lblMessage.Text = "¡El usuario o la contaseña no son correctos!";
                 }
                 else
                 {
