@@ -63,9 +63,39 @@ namespace View.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clientes {
+            get {
+                object obj = ResourceManager.GetObject("clientes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap compras {
+            get {
+                object obj = ResourceManager.GetObject("compras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap default_image {
             get {
                 object obj = ResourceManager.GetObject("default-image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap empleados {
+            get {
+                object obj = ResourceManager.GetObject("empleados", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +166,46 @@ namespace View.Properties {
         internal static System.Drawing.Bitmap Mobile_Menu_Icon {
             get {
                 object obj = ResourceManager.GetObject("Mobile-Menu-Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pagos {
+            get {
+                object obj = ResourceManager.GetObject("pagos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prodcutos {
+            get {
+                object obj = ResourceManager.GetObject("prodcutos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap producto {
+            get {
+                object obj = ResourceManager.GetObject("producto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap venta {
+            get {
+                object obj = ResourceManager.GetObject("venta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

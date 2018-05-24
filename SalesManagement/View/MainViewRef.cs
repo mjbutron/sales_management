@@ -21,7 +21,7 @@ namespace View
         {
             if(menuLeft.Width == 250)
             {
-                menuLeft.Width = 80;
+                menuLeft.Width = 74;
             }else
             {
                 menuLeft.Width = 250;
@@ -36,6 +36,25 @@ namespace View
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void openViewInPanel(object viewForm)
+        {
+            if(this.contentView.Controls.Count > 0)
+            {
+                this.contentView.Controls.RemoveAt(0);
+            }
+            Form childForm = viewForm as Form;
+            childForm.TopLevel = false;
+            childForm.Dock = DockStyle.Fill;
+            this.contentView.Controls.Add(childForm);
+            this.contentView.Tag = childForm;
+            childForm.Show();
+        }
+
+        private void btnItems_Click(object sender, EventArgs e)
+        {
+            openViewInPanel(new ItemView());
         }
     }
 }
