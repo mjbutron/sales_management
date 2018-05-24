@@ -12,6 +12,12 @@ namespace View
 {
     public partial class MainViewRef : Form
     {
+
+        public string IdEmployee = "";
+        public string NameEmployee = "";
+        public string LastNameEmployee = "";
+        public string RolEmployee = "";
+
         public MainViewRef()
         {
             InitializeComponent();
@@ -55,6 +61,17 @@ namespace View
         private void btnItems_Click(object sender, EventArgs e)
         {
             openViewInPanel(new ItemView());
+        }
+
+        private void btnDashBoard_Click(object sender, EventArgs e)
+        {
+            openViewInPanel(new DashboardView());
+        }
+
+        private void menuLeft_Paint(object sender, PaintEventArgs e)
+        {
+            this.lblUser.Text = NameEmployee;
+            this.lblRol.Text = RolEmployee;
         }
     }
 }

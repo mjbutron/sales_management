@@ -92,13 +92,13 @@ namespace View
                 }
                 else
                 {
-                    MainView mainView = new MainView();
-                    mainView.IdEmployee = dt.Rows[0][0].ToString();
-                    mainView.NameEmployee = dt.Rows[0][1].ToString();
-                    mainView.LastNameEmployee = dt.Rows[0][2].ToString();
-                    mainView.RolEmployee = dt.Rows[0][3].ToString();
+                    MainViewRef mainViewRef = new MainViewRef();
+                    mainViewRef.IdEmployee = dt.Rows[0][0].ToString();
+                    mainViewRef.NameEmployee = dt.Rows[0][1].ToString();
+                    mainViewRef.LastNameEmployee = dt.Rows[0][2].ToString();
+                    mainViewRef.RolEmployee = dt.Rows[0][3].ToString();
 
-                    mainView.Show();
+                    mainViewRef.Show();
                     this.Hide();
 
                 }

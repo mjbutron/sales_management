@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.menuLeft = new System.Windows.Forms.Panel();
-            this.menuTop = new System.Windows.Forms.Panel();
-            this.contentView = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnMinimize = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.PictureBox();
-            this.btnMobileMenu = new System.Windows.Forms.PictureBox();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnDashBoard = new System.Windows.Forms.Button();
             this.btnTools = new System.Windows.Forms.Button();
             this.btnProvider = new System.Windows.Forms.Button();
             this.btnEntry = new System.Windows.Forms.Button();
@@ -43,19 +41,28 @@
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnItems = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDashBoard = new System.Windows.Forms.Button();
+            this.menuTop = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.PictureBox();
+            this.btnMobileMenu = new System.Windows.Forms.PictureBox();
+            this.contentView = new System.Windows.Forms.Panel();
             this.menuLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMobileMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuLeft
             // 
             this.menuLeft.BackColor = System.Drawing.Color.SteelBlue;
+            this.menuLeft.Controls.Add(this.lblRol);
+            this.menuLeft.Controls.Add(this.lblUser);
+            this.menuLeft.Controls.Add(this.pictureBox2);
             this.menuLeft.Controls.Add(this.btnDashBoard);
             this.menuLeft.Controls.Add(this.btnTools);
             this.menuLeft.Controls.Add(this.btnProvider);
@@ -73,6 +80,199 @@
             this.menuLeft.Name = "menuLeft";
             this.menuLeft.Size = new System.Drawing.Size(250, 650);
             this.menuLeft.TabIndex = 0;
+            this.menuLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.menuLeft_Paint);
+            // 
+            // lblRol
+            // 
+            this.lblRol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblRol.AutoSize = true;
+            this.lblRol.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRol.ForeColor = System.Drawing.Color.White;
+            this.lblRol.Location = new System.Drawing.Point(84, 622);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(85, 15);
+            this.lblRol.TabIndex = 13;
+            this.lblRol.Text = "Rol de usuario";
+            // 
+            // lblUser
+            // 
+            this.lblUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Location = new System.Drawing.Point(84, 606);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(56, 16);
+            this.lblUser.TabIndex = 12;
+            this.lblUser.Text = "Usuario";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox2.Image = global::View.Properties.Resources.UserLog;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 572);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(75, 66);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnDashBoard
+            // 
+            this.btnDashBoard.FlatAppearance.BorderSize = 0;
+            this.btnDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashBoard.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashBoard.ForeColor = System.Drawing.Color.White;
+            this.btnDashBoard.Image = global::View.Properties.Resources.producto;
+            this.btnDashBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashBoard.Location = new System.Drawing.Point(0, 90);
+            this.btnDashBoard.Name = "btnDashBoard";
+            this.btnDashBoard.Size = new System.Drawing.Size(250, 30);
+            this.btnDashBoard.TabIndex = 10;
+            this.btnDashBoard.Text = "Inicio";
+            this.btnDashBoard.UseVisualStyleBackColor = true;
+            this.btnDashBoard.Click += new System.EventHandler(this.btnDashBoard_Click);
+            // 
+            // btnTools
+            // 
+            this.btnTools.FlatAppearance.BorderSize = 0;
+            this.btnTools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTools.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTools.ForeColor = System.Drawing.Color.White;
+            this.btnTools.Image = global::View.Properties.Resources.producto;
+            this.btnTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTools.Location = new System.Drawing.Point(0, 474);
+            this.btnTools.Name = "btnTools";
+            this.btnTools.Size = new System.Drawing.Size(250, 30);
+            this.btnTools.TabIndex = 9;
+            this.btnTools.Text = "Herramientas";
+            this.btnTools.UseVisualStyleBackColor = true;
+            // 
+            // btnProvider
+            // 
+            this.btnProvider.FlatAppearance.BorderSize = 0;
+            this.btnProvider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProvider.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProvider.ForeColor = System.Drawing.Color.White;
+            this.btnProvider.Image = global::View.Properties.Resources.producto;
+            this.btnProvider.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProvider.Location = new System.Drawing.Point(0, 410);
+            this.btnProvider.Name = "btnProvider";
+            this.btnProvider.Size = new System.Drawing.Size(250, 30);
+            this.btnProvider.TabIndex = 8;
+            this.btnProvider.Text = "Proveedores";
+            this.btnProvider.UseVisualStyleBackColor = true;
+            // 
+            // btnEntry
+            // 
+            this.btnEntry.FlatAppearance.BorderSize = 0;
+            this.btnEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntry.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntry.ForeColor = System.Drawing.Color.White;
+            this.btnEntry.Image = global::View.Properties.Resources.compras;
+            this.btnEntry.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEntry.Location = new System.Drawing.Point(0, 374);
+            this.btnEntry.Name = "btnEntry";
+            this.btnEntry.Size = new System.Drawing.Size(250, 30);
+            this.btnEntry.TabIndex = 7;
+            this.btnEntry.Text = "Almacén";
+            this.btnEntry.UseVisualStyleBackColor = true;
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.Image = global::View.Properties.Resources.clientes;
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 312);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(250, 30);
+            this.btnCustomer.TabIndex = 6;
+            this.btnCustomer.Text = "Clientes";
+            this.btnCustomer.UseVisualStyleBackColor = true;
+            // 
+            // btnSales
+            // 
+            this.btnSales.FlatAppearance.BorderSize = 0;
+            this.btnSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSales.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSales.ForeColor = System.Drawing.Color.White;
+            this.btnSales.Image = global::View.Properties.Resources.venta;
+            this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSales.Location = new System.Drawing.Point(0, 276);
+            this.btnSales.Name = "btnSales";
+            this.btnSales.Size = new System.Drawing.Size(250, 30);
+            this.btnSales.TabIndex = 5;
+            this.btnSales.Text = "Ventas";
+            this.btnSales.UseVisualStyleBackColor = true;
+            // 
+            // btnEmployee
+            // 
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEmployee.Image = global::View.Properties.Resources.empleados;
+            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployee.Location = new System.Drawing.Point(0, 215);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(250, 30);
+            this.btnEmployee.TabIndex = 4;
+            this.btnEmployee.Text = "Empleados";
+            this.btnEmployee.UseVisualStyleBackColor = true;
+            // 
+            // btnCategory
+            // 
+            this.btnCategory.FlatAppearance.BorderSize = 0;
+            this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategory.ForeColor = System.Drawing.Color.White;
+            this.btnCategory.Image = global::View.Properties.Resources.producto;
+            this.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategory.Location = new System.Drawing.Point(0, 179);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.Size = new System.Drawing.Size(250, 30);
+            this.btnCategory.TabIndex = 3;
+            this.btnCategory.Text = "Categorías";
+            this.btnCategory.UseVisualStyleBackColor = true;
+            // 
+            // btnItems
+            // 
+            this.btnItems.FlatAppearance.BorderSize = 0;
+            this.btnItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnItems.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItems.ForeColor = System.Drawing.Color.White;
+            this.btnItems.Image = global::View.Properties.Resources.producto;
+            this.btnItems.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnItems.Location = new System.Drawing.Point(0, 143);
+            this.btnItems.Name = "btnItems";
+            this.btnItems.Size = new System.Drawing.Size(250, 30);
+            this.btnItems.TabIndex = 2;
+            this.btnItems.Text = "Productos";
+            this.btnItems.UseVisualStyleBackColor = true;
+            this.btnItems.Click += new System.EventHandler(this.btnItems_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(78, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(166, 38);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "SISTEMA DE GESTIÓN \r\n                  DE VENTAS";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::View.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(78, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // menuTop
             // 
@@ -85,24 +285,6 @@
             this.menuTop.Name = "menuTop";
             this.menuTop.Size = new System.Drawing.Size(1050, 50);
             this.menuTop.TabIndex = 1;
-            // 
-            // contentView
-            // 
-            this.contentView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentView.Location = new System.Drawing.Point(250, 50);
-            this.contentView.Name = "contentView";
-            this.contentView.Size = new System.Drawing.Size(1050, 600);
-            this.contentView.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "SISTEMA DE GESTIÓN \r\n                  DE VENTAS";
             // 
             // btnMinimize
             // 
@@ -142,151 +324,13 @@
             this.btnMobileMenu.TabStop = false;
             this.btnMobileMenu.Click += new System.EventHandler(this.btnMobileMenu_Click);
             // 
-            // btnTools
+            // contentView
             // 
-            this.btnTools.FlatAppearance.BorderSize = 0;
-            this.btnTools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTools.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTools.ForeColor = System.Drawing.Color.White;
-            this.btnTools.Image = global::View.Properties.Resources.producto;
-            this.btnTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTools.Location = new System.Drawing.Point(0, 460);
-            this.btnTools.Name = "btnTools";
-            this.btnTools.Size = new System.Drawing.Size(250, 40);
-            this.btnTools.TabIndex = 9;
-            this.btnTools.Text = "Herramientas";
-            this.btnTools.UseVisualStyleBackColor = true;
-            // 
-            // btnProvider
-            // 
-            this.btnProvider.FlatAppearance.BorderSize = 0;
-            this.btnProvider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProvider.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProvider.ForeColor = System.Drawing.Color.White;
-            this.btnProvider.Image = global::View.Properties.Resources.producto;
-            this.btnProvider.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProvider.Location = new System.Drawing.Point(0, 414);
-            this.btnProvider.Name = "btnProvider";
-            this.btnProvider.Size = new System.Drawing.Size(250, 40);
-            this.btnProvider.TabIndex = 8;
-            this.btnProvider.Text = "Proveedores";
-            this.btnProvider.UseVisualStyleBackColor = true;
-            // 
-            // btnEntry
-            // 
-            this.btnEntry.FlatAppearance.BorderSize = 0;
-            this.btnEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntry.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntry.ForeColor = System.Drawing.Color.White;
-            this.btnEntry.Image = global::View.Properties.Resources.compras;
-            this.btnEntry.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntry.Location = new System.Drawing.Point(0, 368);
-            this.btnEntry.Name = "btnEntry";
-            this.btnEntry.Size = new System.Drawing.Size(250, 40);
-            this.btnEntry.TabIndex = 7;
-            this.btnEntry.Text = "Almacén";
-            this.btnEntry.UseVisualStyleBackColor = true;
-            // 
-            // btnCustomer
-            // 
-            this.btnCustomer.FlatAppearance.BorderSize = 0;
-            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnCustomer.Image = global::View.Properties.Resources.clientes;
-            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 322);
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(250, 40);
-            this.btnCustomer.TabIndex = 6;
-            this.btnCustomer.Text = "Clientes";
-            this.btnCustomer.UseVisualStyleBackColor = true;
-            // 
-            // btnSales
-            // 
-            this.btnSales.FlatAppearance.BorderSize = 0;
-            this.btnSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSales.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSales.ForeColor = System.Drawing.Color.White;
-            this.btnSales.Image = global::View.Properties.Resources.venta;
-            this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSales.Location = new System.Drawing.Point(0, 276);
-            this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(250, 40);
-            this.btnSales.TabIndex = 5;
-            this.btnSales.Text = "Ventas";
-            this.btnSales.UseVisualStyleBackColor = true;
-            // 
-            // btnEmployee
-            // 
-            this.btnEmployee.FlatAppearance.BorderSize = 0;
-            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployee.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployee.ForeColor = System.Drawing.Color.White;
-            this.btnEmployee.Image = global::View.Properties.Resources.empleados;
-            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 230);
-            this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(250, 40);
-            this.btnEmployee.TabIndex = 4;
-            this.btnEmployee.Text = "Empleados";
-            this.btnEmployee.UseVisualStyleBackColor = true;
-            // 
-            // btnCategory
-            // 
-            this.btnCategory.FlatAppearance.BorderSize = 0;
-            this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategory.ForeColor = System.Drawing.Color.White;
-            this.btnCategory.Image = global::View.Properties.Resources.producto;
-            this.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategory.Location = new System.Drawing.Point(0, 184);
-            this.btnCategory.Name = "btnCategory";
-            this.btnCategory.Size = new System.Drawing.Size(250, 40);
-            this.btnCategory.TabIndex = 3;
-            this.btnCategory.Text = "Categorías";
-            this.btnCategory.UseVisualStyleBackColor = true;
-            // 
-            // btnItems
-            // 
-            this.btnItems.FlatAppearance.BorderSize = 0;
-            this.btnItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnItems.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnItems.ForeColor = System.Drawing.Color.White;
-            this.btnItems.Image = global::View.Properties.Resources.producto;
-            this.btnItems.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnItems.Location = new System.Drawing.Point(0, 138);
-            this.btnItems.Name = "btnItems";
-            this.btnItems.Size = new System.Drawing.Size(250, 40);
-            this.btnItems.TabIndex = 2;
-            this.btnItems.Text = "Productos";
-            this.btnItems.UseVisualStyleBackColor = true;
-            this.btnItems.Click += new System.EventHandler(this.btnItems_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::View.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnDashBoard
-            // 
-            this.btnDashBoard.FlatAppearance.BorderSize = 0;
-            this.btnDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashBoard.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashBoard.ForeColor = System.Drawing.Color.White;
-            this.btnDashBoard.Image = global::View.Properties.Resources.producto;
-            this.btnDashBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashBoard.Location = new System.Drawing.Point(0, 92);
-            this.btnDashBoard.Name = "btnDashBoard";
-            this.btnDashBoard.Size = new System.Drawing.Size(250, 40);
-            this.btnDashBoard.TabIndex = 10;
-            this.btnDashBoard.Text = "Inicio";
-            this.btnDashBoard.UseVisualStyleBackColor = true;
+            this.contentView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentView.Location = new System.Drawing.Point(250, 50);
+            this.contentView.Name = "contentView";
+            this.contentView.Size = new System.Drawing.Size(1050, 600);
+            this.contentView.TabIndex = 2;
             // 
             // MainViewRef
             // 
@@ -302,11 +346,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuLeft.ResumeLayout(false);
             this.menuLeft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMobileMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -330,5 +375,8 @@
         private System.Windows.Forms.Button btnProvider;
         private System.Windows.Forms.Button btnTools;
         private System.Windows.Forms.Button btnDashBoard;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.Label lblUser;
     }
 }
