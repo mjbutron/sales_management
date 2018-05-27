@@ -99,6 +99,14 @@ namespace View
                     mainViewRef.RolEmployee = dt.Rows[0][3].ToString();
 
                     mainViewRef.Show();
+
+                    /*MainView mainView = new MainView();
+                    mainView.IdEmployee = dt.Rows[0][0].ToString();
+                    mainView.NameEmployee = dt.Rows[0][1].ToString();
+                    mainView.LastNameEmployee = dt.Rows[0][2].ToString();
+                    mainView.RolEmployee = dt.Rows[0][3].ToString();
+
+                    mainView.Show();*/
                     this.Hide();
 
                 }

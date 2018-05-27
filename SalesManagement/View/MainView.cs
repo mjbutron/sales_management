@@ -191,14 +191,14 @@ namespace View
             }
             else
             {
-                this.mspStore.Enabled = false;
-                this.mspSales.Enabled = false;
-                this.mspShopping.Enabled = false;
-                this.mspManagement.Enabled = false;
-                this.mspReport.Enabled = false;
-                this.mspTools.Enabled = false;
-                this.tspSales.Enabled = false;
-                this.tspShopping.Enabled = false;
+                this.mspStore.Enabled = true;
+                this.mspSales.Enabled = true;
+                this.mspShopping.Enabled = true;
+                this.mspManagement.Enabled = true;
+                this.mspReport.Enabled = true;
+                this.mspTools.Enabled = true;
+                this.tspSales.Enabled = true;
+                this.tspShopping.Enabled = true;
             }
         }
 

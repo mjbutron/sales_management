@@ -21,6 +21,7 @@ namespace View
         public MainViewRef()
         {
             InitializeComponent();
+            openViewInPanel(new DashboardView());
         }
 
         private void btnMobileMenu_Click(object sender, EventArgs e)

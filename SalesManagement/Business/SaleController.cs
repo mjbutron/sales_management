@@ -70,6 +70,10 @@ namespace Business
             SaleData DSale = new SaleData();
             return DSale.ShowItemToSaleByCode(Code);
         }
+        public static DataTable ShowLastSales()
+        {
+            return new SaleData().ShowLastSales();
+        }
 
         #endregion
     }
