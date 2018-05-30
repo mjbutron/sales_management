@@ -270,8 +270,6 @@ namespace View
             System.IO.MemoryStream memory = new System.IO.MemoryStream(buffer);
             this.pbxImage.Image = Image.FromStream(memory);
             this.pbxImage.SizeMode = PictureBoxSizeMode.StretchImage;
-
-            this.tabControl1.SelectedIndex = 1;
         }
 
         private void chkDelete_CheckedChanged(object sender, EventArgs e)
