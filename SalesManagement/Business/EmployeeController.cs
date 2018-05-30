@@ -81,6 +81,11 @@ namespace Business
             DEmployee.Pass = pass;
             return DEmployee.Login(DEmployee);
         }
+
+        public static DataTable ShowTopEmployee()
+        {
+            return new EmployeeData().ShowTopEmployee();
+        }
         #endregion
     }
 }

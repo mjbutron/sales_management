@@ -594,7 +594,6 @@ namespace Data
             }
 
             return DataTableRes;
-
         }
         #endregion
     }

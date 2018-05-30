@@ -43,6 +43,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dataListStock = new System.Windows.Forms.DataGridView();
             this.dataListLastSales = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dataListTopEmp = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -51,6 +55,7 @@
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListLastSales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListTopEmp)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -228,14 +233,72 @@
             this.dataListLastSales.Name = "dataListLastSales";
             this.dataListLastSales.ReadOnly = true;
             this.dataListLastSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListLastSales.Size = new System.Drawing.Size(304, 249);
+            this.dataListLastSales.Size = new System.Drawing.Size(327, 249);
             this.dataListLastSales.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(59, 218);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(214, 16);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Productos bajo de stock";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(665, 218);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(161, 16);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Últimas ventas";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dataListTopEmp
+            // 
+            this.dataListTopEmp.AllowUserToAddRows = false;
+            this.dataListTopEmp.AllowUserToDeleteRows = false;
+            this.dataListTopEmp.AllowUserToOrderColumns = true;
+            this.dataListTopEmp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataListTopEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListTopEmp.Location = new System.Drawing.Point(59, 539);
+            this.dataListTopEmp.MultiSelect = false;
+            this.dataListTopEmp.Name = "dataListTopEmp";
+            this.dataListTopEmp.ReadOnly = true;
+            this.dataListTopEmp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataListTopEmp.Size = new System.Drawing.Size(506, 125);
+            this.dataListTopEmp.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.Location = new System.Drawing.Point(59, 520);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(214, 16);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Top ventas de Empleados";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // DashboardView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 676);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.dataListTopEmp);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dataListLastSales);
             this.Controls.Add(this.dataListStock);
             this.Controls.Add(this.panel6);
@@ -258,6 +321,7 @@
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataListStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListLastSales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListTopEmp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -279,5 +343,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataListStock;
         private System.Windows.Forms.DataGridView dataListLastSales;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView dataListTopEmp;
+        private System.Windows.Forms.Label label8;
     }
 }

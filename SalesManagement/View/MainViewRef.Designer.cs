@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.menuLeft = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
@@ -49,9 +52,6 @@
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.btnMobileMenu = new System.Windows.Forms.PictureBox();
             this.contentView = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.menuLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +89,30 @@
             this.menuLeft.Size = new System.Drawing.Size(250, 650);
             this.menuLeft.TabIndex = 0;
             this.menuLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.menuLeft_Paint);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
+            this.panel4.Location = new System.Drawing.Point(0, 459);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(250, 1);
+            this.panel4.TabIndex = 17;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Location = new System.Drawing.Point(1, 357);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(250, 1);
+            this.panel3.TabIndex = 16;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Location = new System.Drawing.Point(1, 262);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(250, 1);
+            this.panel2.TabIndex = 15;
             // 
             // panel1
             // 
@@ -299,7 +323,7 @@
             this.menuTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.menuTop.Location = new System.Drawing.Point(250, 0);
             this.menuTop.Name = "menuTop";
-            this.menuTop.Size = new System.Drawing.Size(1050, 50);
+            this.menuTop.Size = new System.Drawing.Size(1050, 37);
             this.menuTop.TabIndex = 1;
             // 
             // btnMinimize
@@ -307,7 +331,7 @@
             this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.Image = global::View.Properties.Resources.icon_minimizar;
-            this.btnMinimize.Location = new System.Drawing.Point(976, 6);
+            this.btnMinimize.Location = new System.Drawing.Point(976, 4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(30, 30);
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -320,7 +344,7 @@
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Image = global::View.Properties.Resources.logout;
-            this.btnExit.Location = new System.Drawing.Point(1012, 6);
+            this.btnExit.Location = new System.Drawing.Point(1012, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(30, 30);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -332,9 +356,9 @@
             // 
             this.btnMobileMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMobileMenu.Image = global::View.Properties.Resources.Mobile_Menu_Icon;
-            this.btnMobileMenu.Location = new System.Drawing.Point(6, 6);
+            this.btnMobileMenu.Location = new System.Drawing.Point(6, 4);
             this.btnMobileMenu.Name = "btnMobileMenu";
-            this.btnMobileMenu.Size = new System.Drawing.Size(35, 35);
+            this.btnMobileMenu.Size = new System.Drawing.Size(30, 30);
             this.btnMobileMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMobileMenu.TabIndex = 0;
             this.btnMobileMenu.TabStop = false;
@@ -343,34 +367,10 @@
             // contentView
             // 
             this.contentView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentView.Location = new System.Drawing.Point(250, 50);
+            this.contentView.Location = new System.Drawing.Point(250, 37);
             this.contentView.Name = "contentView";
-            this.contentView.Size = new System.Drawing.Size(1050, 600);
+            this.contentView.Size = new System.Drawing.Size(1050, 613);
             this.contentView.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.Location = new System.Drawing.Point(1, 262);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 1);
-            this.panel2.TabIndex = 15;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.LightGray;
-            this.panel3.Location = new System.Drawing.Point(1, 357);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(250, 1);
-            this.panel3.TabIndex = 16;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.LightGray;
-            this.panel4.Location = new System.Drawing.Point(0, 459);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(250, 1);
-            this.panel4.TabIndex = 17;
             // 
             // MainViewRef
             // 
