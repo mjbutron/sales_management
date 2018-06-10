@@ -107,6 +107,7 @@ namespace View
         {
             this.dataList.Columns[0].Visible = false;
             this.dataList.Columns[1].Visible = false;
+            this.dataList.Columns[5].Visible = false;
             this.dataList.Columns[6].Visible = false;
         }
 

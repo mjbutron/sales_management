@@ -23,8 +23,6 @@ namespace View
             this.dataListStock.DataSource = ItemController.StockItems();
             this.dataListLastSales.DataSource = SaleController.ShowLastSales();
             this.dataListTopEmp.DataSource = EmployeeController.ShowTopEmployee();
-            //this.HiddenColums();
-            //lblTotal.Text = "Total de regitros: " + Convert.ToString(dataList.Rows.Count);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
