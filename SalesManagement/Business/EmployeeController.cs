@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Data;
+using System.Security.Cryptography;
 
 namespace Business
 {
@@ -24,7 +25,7 @@ namespace Business
             DEmployee.Email = email;
             DEmployee.Rol = rol;
             DEmployee.User = user;
-            DEmployee.Pass = pass;
+            DEmployee.Pass = EncodePassword(string.Concat(user, pass));
 
             return DEmployee.Insert(DEmployee);
         }
@@ -43,7 +44,7 @@ namespace Business
             DEmployee.Email = email;
             DEmployee.Rol = rol;
             DEmployee.User = user;
-            DEmployee.Pass = pass;
+            DEmployee.Pass = EncodePassword(string.Concat(user, pass));
 
             return DEmployee.Edit(DEmployee);
         }
@@ -85,6 +86,16 @@ namespace Business
         public static DataTable ShowTopEmployee()
         {
             return new EmployeeData().ShowTopEmployee();
+        }
+
+        public static string EncodePassword(string originalPassword)
+        {
+            SHA1 sha1 = new SHA1CryptoServiceProvider();
+
+            byte[] inputBytes = (new UnicodeEncoding()).GetBytes(originalPassword);
+            byte[] hash = sha1.ComputeHash(inputBytes);
+
+            return Convert.ToBase64String(hash);
         }
         #endregion
     }

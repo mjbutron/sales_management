@@ -88,6 +88,9 @@ namespace View
         {
             this.dataList.Columns[0].Visible = false;
             this.dataList.Columns[1].Visible = false;
+            this.dataList.Columns[5].Visible = false;
+            this.dataList.Columns[7].Visible = false;
+            this.dataList.Columns[12].Visible = false;
         }
 
         private void ShowData()
@@ -183,33 +186,6 @@ namespace View
             }
         }
 
-        private void dataList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == dataList.Columns["Eliminar"].Index)
-            {
-                DataGridViewCheckBoxCell ChkDelete = (DataGridViewCheckBoxCell)dataList.Rows[e.RowIndex].Cells["Eliminar"];
-                ChkDelete.Value = !Convert.ToBoolean(ChkDelete.Value);
-            }
-        }
-
-        private void dataList_DoubleClick(object sender, EventArgs e)
-        {
-            this.txtIdemployee.Text = Convert.ToString(this.dataList.CurrentRow.Cells["id_empleado"].Value);
-            this.txtName.Text = Convert.ToString(this.dataList.CurrentRow.Cells["nombre"].Value);
-            this.txtLastname.Text = Convert.ToString(this.dataList.CurrentRow.Cells["apellidos"].Value);
-            this.cbxSex.Text = Convert.ToString(this.dataList.CurrentRow.Cells["sexo"].Value);
-            this.dtpDate.Value = Convert.ToDateTime(this.dataList.CurrentRow.Cells["fecha_nacimiento"].Value);
-            this.txtNumdoc.Text = Convert.ToString(this.dataList.CurrentRow.Cells["dni"].Value);
-            this.txtAddress.Text = Convert.ToString(this.dataList.CurrentRow.Cells["direccion"].Value);
-            this.txtPhone.Text = Convert.ToString(this.dataList.CurrentRow.Cells["telefono"].Value);
-            this.txtEmail.Text = Convert.ToString(this.dataList.CurrentRow.Cells["email"].Value);
-            this.cbxRol.Text = Convert.ToString(this.dataList.CurrentRow.Cells["rol"].Value);
-            this.txtUser.Text = Convert.ToString(this.dataList.CurrentRow.Cells["usuario"].Value);
-            this.txtPass.Text = Convert.ToString(this.dataList.CurrentRow.Cells["password"].Value);
-
-            this.tabControl1.SelectedIndex = 1;
-        }
-
         private void btnNew_Click(object sender, EventArgs e)
         {
             this.IsNew = true;
@@ -295,6 +271,31 @@ namespace View
             this.EnableControl(false);
             this.EnableButtons();
             this.ResetForm();
+        }
+
+        private void dataList_DoubleClick(object sender, EventArgs e)
+        {
+            this.txtIdemployee.Text = Convert.ToString(this.dataList.CurrentRow.Cells["id_empleado"].Value);
+            this.txtName.Text = Convert.ToString(this.dataList.CurrentRow.Cells["nombre"].Value);
+            this.txtLastname.Text = Convert.ToString(this.dataList.CurrentRow.Cells["apellidos"].Value);
+            this.cbxSex.Text = Convert.ToString(this.dataList.CurrentRow.Cells["sexo"].Value);
+            this.dtpDate.Value = Convert.ToDateTime(this.dataList.CurrentRow.Cells["fecha"].Value);
+            this.txtNumdoc.Text = Convert.ToString(this.dataList.CurrentRow.Cells["dni"].Value);
+            this.txtAddress.Text = Convert.ToString(this.dataList.CurrentRow.Cells["dirección"].Value);
+            this.txtPhone.Text = Convert.ToString(this.dataList.CurrentRow.Cells["teléfono"].Value);
+            this.txtEmail.Text = Convert.ToString(this.dataList.CurrentRow.Cells["email"].Value);
+            this.cbxRol.Text = Convert.ToString(this.dataList.CurrentRow.Cells["rol"].Value);
+            this.txtUser.Text = Convert.ToString(this.dataList.CurrentRow.Cells["usuario"].Value);
+            this.txtPass.Text = Convert.ToString(this.dataList.CurrentRow.Cells["password"].Value);
+        }
+
+        private void dataList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+             if (e.ColumnIndex == dataList.Columns["Eliminar"].Index)
+            {
+                DataGridViewCheckBoxCell ChkDelete = (DataGridViewCheckBoxCell)dataList.Rows[e.RowIndex].Cells["Eliminar"];
+                ChkDelete.Value = !Convert.ToBoolean(ChkDelete.Value);
+            }
         }
     }
 }

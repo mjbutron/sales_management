@@ -74,5 +74,10 @@ namespace View
             this.lblUser.Text = NameEmployee;
             this.lblRol.Text = RolEmployee;
         }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            openViewInPanel(new EmployeeView());
+        }
     }
 }
