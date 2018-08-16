@@ -35,12 +35,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.menuTop = new System.Windows.Forms.Panel();
-            this.contentView = new System.Windows.Forms.Panel();
-            this.btnMinimize = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.PictureBox();
-            this.btnMobileMenu = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnDashBoard = new System.Windows.Forms.Button();
             this.btnTools = new System.Windows.Forms.Button();
@@ -51,14 +45,20 @@
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnItems = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuTop = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.PictureBox();
+            this.btnMobileMenu = new System.Windows.Forms.PictureBox();
+            this.contentView = new System.Windows.Forms.Panel();
             this.menuLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMobileMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuLeft
@@ -145,74 +145,6 @@
             this.lblUser.Size = new System.Drawing.Size(56, 16);
             this.lblUser.TabIndex = 12;
             this.lblUser.Text = "Usuario";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "SISTEMA DE GESTIÓN \r\n                  DE VENTAS";
-            // 
-            // menuTop
-            // 
-            this.menuTop.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.menuTop.Controls.Add(this.btnMinimize);
-            this.menuTop.Controls.Add(this.btnExit);
-            this.menuTop.Controls.Add(this.btnMobileMenu);
-            this.menuTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.menuTop.Location = new System.Drawing.Point(250, 0);
-            this.menuTop.Name = "menuTop";
-            this.menuTop.Size = new System.Drawing.Size(1050, 37);
-            this.menuTop.TabIndex = 1;
-            // 
-            // contentView
-            // 
-            this.contentView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contentView.Location = new System.Drawing.Point(250, 37);
-            this.contentView.Name = "contentView";
-            this.contentView.Size = new System.Drawing.Size(1050, 613);
-            this.contentView.TabIndex = 2;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimize.Image = global::View.Properties.Resources.icon_minimizar;
-            this.btnMinimize.Location = new System.Drawing.Point(976, 4);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(30, 30);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Image = global::View.Properties.Resources.logout;
-            this.btnExit.Location = new System.Drawing.Point(1012, 4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(30, 30);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnExit.TabIndex = 1;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnMobileMenu
-            // 
-            this.btnMobileMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMobileMenu.Image = global::View.Properties.Resources.Mobile_Menu_Icon;
-            this.btnMobileMenu.Location = new System.Drawing.Point(6, 4);
-            this.btnMobileMenu.Name = "btnMobileMenu";
-            this.btnMobileMenu.Size = new System.Drawing.Size(30, 30);
-            this.btnMobileMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMobileMenu.TabIndex = 0;
-            this.btnMobileMenu.TabStop = false;
-            this.btnMobileMenu.Click += new System.EventHandler(this.btnMobileMenu_Click);
             // 
             // pictureBox2
             // 
@@ -346,6 +278,7 @@
             this.btnCategory.TabIndex = 3;
             this.btnCategory.Text = "Categorías";
             this.btnCategory.UseVisualStyleBackColor = true;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
             // btnItems
             // 
@@ -363,6 +296,16 @@
             this.btnItems.UseVisualStyleBackColor = true;
             this.btnItems.Click += new System.EventHandler(this.btnItems_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(78, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(166, 38);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "SISTEMA DE GESTIÓN \r\n                  DE VENTAS";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::View.Properties.Resources.Logo;
@@ -372,6 +315,64 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // menuTop
+            // 
+            this.menuTop.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.menuTop.Controls.Add(this.btnMinimize);
+            this.menuTop.Controls.Add(this.btnExit);
+            this.menuTop.Controls.Add(this.btnMobileMenu);
+            this.menuTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.menuTop.Location = new System.Drawing.Point(250, 0);
+            this.menuTop.Name = "menuTop";
+            this.menuTop.Size = new System.Drawing.Size(1050, 37);
+            this.menuTop.TabIndex = 1;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Image = global::View.Properties.Resources.icon_minimizar;
+            this.btnMinimize.Location = new System.Drawing.Point(976, 4);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(30, 30);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Image = global::View.Properties.Resources.logout;
+            this.btnExit.Location = new System.Drawing.Point(1012, 4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(30, 30);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnExit.TabIndex = 1;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnMobileMenu
+            // 
+            this.btnMobileMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMobileMenu.Image = global::View.Properties.Resources.Mobile_Menu_Icon;
+            this.btnMobileMenu.Location = new System.Drawing.Point(6, 4);
+            this.btnMobileMenu.Name = "btnMobileMenu";
+            this.btnMobileMenu.Size = new System.Drawing.Size(30, 30);
+            this.btnMobileMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMobileMenu.TabIndex = 0;
+            this.btnMobileMenu.TabStop = false;
+            this.btnMobileMenu.Click += new System.EventHandler(this.btnMobileMenu_Click);
+            // 
+            // contentView
+            // 
+            this.contentView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentView.Location = new System.Drawing.Point(250, 37);
+            this.contentView.Name = "contentView";
+            this.contentView.Size = new System.Drawing.Size(1050, 613);
+            this.contentView.TabIndex = 2;
             // 
             // MainViewRef
             // 
@@ -387,12 +388,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuLeft.ResumeLayout(false);
             this.menuLeft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMobileMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

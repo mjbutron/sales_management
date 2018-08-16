@@ -167,10 +167,8 @@ namespace View
         private void dataList_DoubleClick(object sender, EventArgs e)
         {
             this.txtIdcategory.Text = Convert.ToString(this.dataList.CurrentRow.Cells["id_categoria"].Value);
-            this.txtNamecategory.Text = Convert.ToString(this.dataList.CurrentRow.Cells["nombre"].Value);
-            this.txtDescriptioncategory.Text = Convert.ToString(this.dataList.CurrentRow.Cells["descripcion"].Value);
-
-            this.tabControl1.SelectedIndex = 1;
+            this.txtNamecategory.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Nombre"].Value);
+            this.txtDescriptioncategory.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Descripción"].Value);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -211,15 +209,6 @@ namespace View
             }
         }
 
-        private void dataList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == dataList.Columns["Eliminar"].Index)
-            {
-                DataGridViewCheckBoxCell ChkDelete = (DataGridViewCheckBoxCell)dataList.Rows[e.RowIndex].Cells["Eliminar"];
-                ChkDelete.Value = !Convert.ToBoolean(ChkDelete.Value);
-            }
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try
@@ -254,6 +243,15 @@ namespace View
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void dataList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataList.Columns["Eliminar"].Index)
+            {
+                DataGridViewCheckBoxCell ChkDelete = (DataGridViewCheckBoxCell)dataList.Rows[e.RowIndex].Cells["Eliminar"];
+                ChkDelete.Value = !Convert.ToBoolean(ChkDelete.Value);
             }
         }
     }

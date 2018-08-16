@@ -83,5 +83,10 @@ namespace View
         {
             openViewInPanel(new EmployeeView());
         }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            openViewInPanel(new CategoryView());
+        }
     }
 }
