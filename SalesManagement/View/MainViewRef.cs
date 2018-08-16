@@ -88,5 +88,10 @@ namespace View
         {
             openViewInPanel(new CategoryView());
         }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            openViewInPanel(new CustomerView());
+        }
     }
 }

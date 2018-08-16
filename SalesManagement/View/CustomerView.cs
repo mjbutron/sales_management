@@ -190,17 +190,15 @@ namespace View
         private void dataList_DoubleClick(object sender, EventArgs e)
         {
             this.txtIdcustomer.Text = Convert.ToString(this.dataList.CurrentRow.Cells["id_cliente"].Value);
-            this.txtName.Text = Convert.ToString(this.dataList.CurrentRow.Cells["nombre"].Value);
-            this.txtLastname.Text = Convert.ToString(this.dataList.CurrentRow.Cells["apellidos"].Value);
-            this.cbxSex.Text = Convert.ToString(this.dataList.CurrentRow.Cells["sexo"].Value);
-            this.dtpDate.Value = Convert.ToDateTime(this.dataList.CurrentRow.Cells["fecha_nacimiento"].Value);
-            this.cbxTypedoc.Text = Convert.ToString(this.dataList.CurrentRow.Cells["tipo_documento"].Value);
-            this.txtNumdoc.Text = Convert.ToString(this.dataList.CurrentRow.Cells["num_documento"].Value);
-            this.txtAddress.Text = Convert.ToString(this.dataList.CurrentRow.Cells["direccion"].Value);
-            this.txtPhone.Text = Convert.ToString(this.dataList.CurrentRow.Cells["telefono"].Value);    
-            this.txtEmail.Text = Convert.ToString(this.dataList.CurrentRow.Cells["email"].Value);
-
-            this.tabControl1.SelectedIndex = 1;
+            this.txtName.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Nombre"].Value);
+            this.txtLastname.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Apellidos"].Value);
+            this.cbxSex.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Sexo"].Value);
+            this.dtpDate.Value = Convert.ToDateTime(this.dataList.CurrentRow.Cells["Nacimiento"].Value);
+            this.cbxTypedoc.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Documentación"].Value);
+            this.txtNumdoc.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Numero"].Value);
+            this.txtAddress.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Dirección"].Value);
+            this.txtPhone.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Teléfono"].Value);    
+            this.txtEmail.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Email"].Value);
         }
 
         private void btnNew_Click(object sender, EventArgs e)
