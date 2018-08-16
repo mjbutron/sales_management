@@ -133,16 +133,6 @@ namespace View.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap loginBg {
-            get {
-                object obj = ResourceManager.GetObject("loginBg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Logo {
             get {
                 object obj = ResourceManager.GetObject("Logo", resourceCulture);
@@ -176,16 +166,6 @@ namespace View.Properties {
         internal static System.Drawing.Bitmap pagos {
             get {
                 object obj = ResourceManager.GetObject("pagos", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap prodcutos {
-            get {
-                object obj = ResourceManager.GetObject("prodcutos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

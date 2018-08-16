@@ -261,9 +261,9 @@ namespace View
         private void dataList_DoubleClick(object sender, EventArgs e)
         {
             this.txtIditem.Text = Convert.ToString(this.dataList.CurrentRow.Cells["id_articulo"].Value);
-            this.txtCodeitem.Text = Convert.ToString(this.dataList.CurrentRow.Cells["codigo"].Value);
-            this.txtNameitem.Text = Convert.ToString(this.dataList.CurrentRow.Cells["nombre"].Value);
-            this.txtDescriptionitem.Text = Convert.ToString(this.dataList.CurrentRow.Cells["descripcion"].Value);
+            this.txtCodeitem.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Código"].Value);
+            this.txtNameitem.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Nombre"].Value);
+            this.txtDescriptionitem.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Descripción"].Value);
             this.cbxCategory.SelectedValue = Convert.ToString(this.dataList.CurrentRow.Cells["id_categoria"].Value);
 
             byte[] buffer = (byte[])this.dataList.CurrentRow.Cells["imagen"].Value;

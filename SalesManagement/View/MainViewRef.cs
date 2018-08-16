@@ -37,7 +37,11 @@ namespace View
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialog = MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)

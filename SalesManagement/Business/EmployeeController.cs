@@ -79,7 +79,7 @@ namespace Business
         {
             EmployeeData DEmployee = new EmployeeData();
             DEmployee.User = user;
-            DEmployee.Pass = pass;
+            DEmployee.Pass = EncodePassword(string.Concat(user, pass));
             return DEmployee.Login(DEmployee);
         }
 

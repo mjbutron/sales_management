@@ -249,16 +249,7 @@
     <None Include="Resources\default-image.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Login.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\gearInit.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loginBg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\loginBg1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo.png" />
@@ -274,9 +265,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon minimizar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\prodcutos.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\producto.png" />
