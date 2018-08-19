@@ -244,14 +244,13 @@ namespace View
         {
             this.txtIdsale.Text = Convert.ToString(this.dataList.CurrentRow.Cells["id_venta"].Value);
             this.dtpSaleDate.Value = Convert.ToDateTime(this.dataList.CurrentRow.Cells["Fecha"].Value);
-            this.cbxTypeReceipt.Text = Convert.ToString(this.dataList.CurrentRow.Cells["tipo_recibo"].Value);
+            this.cbxTypeReceipt.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Recibo"].Value);
             this.txtCustomer.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Cliente"].Value);
-            this.txtSerie.Text = Convert.ToString(this.dataList.CurrentRow.Cells["serie"].Value);
-            this.txtSequence.Text = Convert.ToString(this.dataList.CurrentRow.Cells["consecutivo"].Value);
+            this.txtSerie.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Serie"].Value);
+            this.txtSequence.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Consecutivo"].Value);
             this.lblSumTotal.Text = Convert.ToString(this.dataList.CurrentRow.Cells["Total"].Value);
 
             this.ShowDetail();
-            this.tabControl1.SelectedIndex = 1;
         }
 
         private void chkDelete_CheckedChanged(object sender, EventArgs e)

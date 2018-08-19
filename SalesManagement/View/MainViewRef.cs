@@ -93,5 +93,10 @@ namespace View
         {
             openViewInPanel(new CustomerView());
         }
+
+        private void btnSales_Click(object sender, EventArgs e)
+        {
+            openViewInPanel(new SaleView());
+        }
     }
 }
