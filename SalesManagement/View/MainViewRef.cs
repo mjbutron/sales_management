@@ -96,7 +96,9 @@ namespace View
 
         private void btnSales_Click(object sender, EventArgs e)
         {
-            openViewInPanel(new SaleView());
+            SaleView saleView = SaleView.GetInstance();
+            saleView.IdEmployee = Convert.ToInt32(this.IdEmployee);
+            openViewInPanel(saleView);
         }
     }
 }

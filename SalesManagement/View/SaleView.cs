@@ -41,7 +41,7 @@ namespace View
             this.txtItem.Text = name;
             this.txtPriceBuy.Text = Convert.ToString(priceBuy);
             this.txtPriceSale.Text = Convert.ToString(priceSale);
-            this.txtCurrentStock.Text = Convert.ToString(stock); 
+            this.txtCurrentStock.Text = Convert.ToString(stock);
         }
 
         private void MessageOK(string message)
@@ -89,8 +89,9 @@ namespace View
         }
 
         private void btnFindItem_Click(object sender, EventArgs e)
-        {
+        {        
             ItemSaleView itemSaleView = new ItemSaleView();
+            itemSaleView.StartPosition = FormStartPosition.CenterScreen;
             itemSaleView.ShowDialog();
         }
 
