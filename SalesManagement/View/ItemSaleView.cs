@@ -20,7 +20,7 @@ namespace View
 
         private void ItemSaleView_Load(object sender, EventArgs e)
         {
-
+            ShowItemToSaleByName();
         }
 
         private void HiddenColums()

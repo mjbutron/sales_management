@@ -65,6 +65,7 @@ namespace View
             this.txtCustomer.ReadOnly = true;
             this.txtCurrentStock.ReadOnly = true;
             this.txtPriceBuy.ReadOnly = true;
+            this.btnDeleteItem.Enabled = false;
         }
 
         private void SaleView_Load(object sender, EventArgs e)
@@ -138,8 +139,6 @@ namespace View
             this.btnFindItem.Enabled = value;
             this.btnFindCustomer.Enabled = value;
             this.btnAdd.Enabled = value;
-            this.btnDeleteItem.Enabled = value;
-
         }
 
         private void EnableButtons()
@@ -381,6 +380,7 @@ namespace View
 
                         this.DtDetail.Rows.Add(row);
                         this.ResetItem();
+                        this.btnDeleteItem.Enabled = true;
                     }
                     else
                     {
@@ -405,6 +405,11 @@ namespace View
                 this.lblSumTotal.Text = TotalToPay.ToString();
 
                 this.DtDetail.Rows.Remove(row);
+
+                if(this.dtvSaleDetailList.RowCount < 1)
+                {
+                    this.btnDeleteItem.Enabled = false;
+                }
             }
             catch (Exception ex)
             {
