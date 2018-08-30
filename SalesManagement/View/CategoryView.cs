@@ -20,6 +20,7 @@ namespace View
         {
             InitializeComponent();
             btnDelete.Enabled = false;
+            this.txtIdcategory.ReadOnly = true;
             this.tltMessage.SetToolTip(this.txtNamecategory, "Ingrese el nombre de la categoría");
         }
 
@@ -42,7 +43,6 @@ namespace View
 
         private void EnableControl(bool value)
         {
-            this.txtIdcategory.ReadOnly = !value;
             this.txtNamecategory.ReadOnly = !value;
             this.txtDescriptioncategory.ReadOnly = !value;
         }

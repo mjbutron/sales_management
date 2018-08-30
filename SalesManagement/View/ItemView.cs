@@ -37,6 +37,7 @@ namespace View
         {
             InitializeComponent();
             btnDelete.Enabled = false;
+            this.txtIditem.ReadOnly = true;
             this.tltMessage.SetToolTip(this.cbxCategory, "Seleccione la categoría del artículo");
             this.tltMessage.SetToolTip(this.txtNameitem, "Ingrese el nombre del artículo");
             this.tltMessage.SetToolTip(this.pbxImage, "Ingrese la imagen del artículo");
@@ -73,7 +74,6 @@ namespace View
 
         private void EnableControl(bool value)
         {
-            this.txtIditem.ReadOnly = !value;
             this.txtCodeitem.ReadOnly = !value;
             this.txtNameitem.ReadOnly = !value;
             this.txtDescriptionitem.ReadOnly = !value;

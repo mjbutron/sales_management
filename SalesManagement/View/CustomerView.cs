@@ -20,6 +20,7 @@ namespace View
         {
             InitializeComponent();
             btnDelete.Enabled = false;
+            this.txtIdcustomer.ReadOnly = true;
             this.tltMessage.SetToolTip(this.txtName, "Ingrese el nombre");
             this.tltMessage.SetToolTip(this.txtNumdoc, "Ingrese el numero de documento");
         }
@@ -47,7 +48,6 @@ namespace View
 
         private void EnableControl(bool value)
         {
-            this.txtIdcustomer.ReadOnly = !value;
             this.txtName.ReadOnly = !value;
             this.txtLastname.ReadOnly = !value;
             this.cbxSex.Enabled = value;

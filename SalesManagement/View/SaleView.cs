@@ -66,6 +66,7 @@ namespace View
             this.txtCurrentStock.ReadOnly = true;
             this.txtPriceBuy.ReadOnly = true;
             this.btnDeleteItem.Enabled = false;
+            this.txtIdsale.ReadOnly = true;
         }
 
         private void SaleView_Load(object sender, EventArgs e)
@@ -122,7 +123,6 @@ namespace View
 
         private void EnableControl(bool value)
         {
-            this.txtIdsale.ReadOnly = !value;
             this.txtSerie.ReadOnly = !value;
             this.txtSequence.ReadOnly = !value;
             this.txtIva.ReadOnly = !value;

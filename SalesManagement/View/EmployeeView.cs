@@ -20,6 +20,7 @@ namespace View
         {
             InitializeComponent();
             btnDelete.Enabled = false;
+            this.txtIdemployee.ReadOnly = true;
             this.tltMessage.SetToolTip(this.txtNumdoc, "Ingrese el numero de documento (DNI)");
             this.tltMessage.SetToolTip(this.txtUser, "Ingrese el nombre de usuario de acceso");
             this.tltMessage.SetToolTip(this.txtUser, "Ingrese la contraseña para el acceso");
@@ -49,8 +50,7 @@ namespace View
         }
 
         private void EnableControl(bool value)
-        {
-            this.txtIdemployee.ReadOnly = !value;
+        {            
             this.txtName.ReadOnly = !value;
             this.txtLastname.ReadOnly = !value;
             this.cbxSex.Enabled = value;
