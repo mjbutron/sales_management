@@ -57,6 +57,11 @@ namespace Business
         {
             return new ItemData().StockItems();
         }
+
+        public static DataTable LowStockItems()
+        {
+            return new ItemData().LowStockItems();
+        }
         #endregion
     }
 }

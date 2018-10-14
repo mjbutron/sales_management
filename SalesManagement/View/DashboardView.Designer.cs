@@ -56,6 +56,11 @@
             this.dataListLastSales = new System.Windows.Forms.DataGridView();
             this.dataListTopEmp = new System.Windows.Forms.DataGridView();
             this.dataListStock = new System.Windows.Forms.DataGridView();
+            this.lblNumEmployee = new System.Windows.Forms.Label();
+            this.lblNumCustomer = new System.Windows.Forms.Label();
+            this.lblNumProvider = new System.Windows.Forms.Label();
+            this.lblNumCategory = new System.Windows.Forms.Label();
+            this.lblLastBackup = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -103,11 +108,13 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblNumEmployee);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(59, 59);
             this.panel2.Margin = new System.Windows.Forms.Padding(50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(102, 124);
+            this.panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.panel2.Size = new System.Drawing.Size(100, 124);
             this.panel2.TabIndex = 3;
             // 
             // label1
@@ -116,7 +123,7 @@
             this.label1.BackColor = System.Drawing.Color.SteelBlue;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(-1, 0);
+            this.label1.Location = new System.Drawing.Point(-2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 33);
             this.label1.TabIndex = 0;
@@ -126,11 +133,12 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.lblNumCustomer);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(261, 60);
             this.panel3.Margin = new System.Windows.Forms.Padding(50);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(102, 124);
+            this.panel3.Size = new System.Drawing.Size(100, 124);
             this.panel3.TabIndex = 4;
             // 
             // label2
@@ -139,7 +147,7 @@
             this.label2.BackColor = System.Drawing.Color.SteelBlue;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(-1, 0);
+            this.label2.Location = new System.Drawing.Point(-2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 33);
             this.label2.TabIndex = 0;
@@ -149,11 +157,12 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.lblNumProvider);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(463, 61);
             this.panel4.Margin = new System.Windows.Forms.Padding(50);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(102, 124);
+            this.panel4.Size = new System.Drawing.Size(100, 124);
             this.panel4.TabIndex = 5;
             // 
             // label3
@@ -162,7 +171,7 @@
             this.label3.BackColor = System.Drawing.Color.SteelBlue;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(-1, 0);
+            this.label3.Location = new System.Drawing.Point(-2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 33);
             this.label3.TabIndex = 0;
@@ -172,11 +181,12 @@
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.lblNumCategory);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Location = new System.Drawing.Point(665, 59);
             this.panel5.Margin = new System.Windows.Forms.Padding(50);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(102, 124);
+            this.panel5.Size = new System.Drawing.Size(100, 124);
             this.panel5.TabIndex = 6;
             // 
             // label4
@@ -185,7 +195,7 @@
             this.label4.BackColor = System.Drawing.Color.SteelBlue;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.LightGray;
-            this.label4.Location = new System.Drawing.Point(-1, 0);
+            this.label4.Location = new System.Drawing.Point(-2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 33);
             this.label4.TabIndex = 0;
@@ -195,11 +205,12 @@
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.lblLastBackup);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Location = new System.Drawing.Point(867, 59);
             this.panel6.Margin = new System.Windows.Forms.Padding(50);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(102, 124);
+            this.panel6.Size = new System.Drawing.Size(100, 124);
             this.panel6.TabIndex = 7;
             // 
             // label5
@@ -208,7 +219,7 @@
             this.label5.BackColor = System.Drawing.Color.SteelBlue;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.LightGray;
-            this.label5.Location = new System.Drawing.Point(-1, 0);
+            this.label5.Location = new System.Drawing.Point(-2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 33);
             this.label5.TabIndex = 0;
@@ -225,7 +236,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(214, 16);
             this.label6.TabIndex = 1;
-            this.label6.Text = "Productos bajo de stock";
+            this.label6.Text = "Productos bajos de stock";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label7
@@ -251,7 +262,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(214, 16);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Top ventas de Empleados";
+            this.label8.Text = "Top ventas empleados";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dataListLastSales
@@ -261,6 +272,7 @@
             this.dataListLastSales.AllowUserToOrderColumns = true;
             this.dataListLastSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataListLastSales.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataListLastSales.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataListLastSales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
@@ -302,6 +314,7 @@
             this.dataListTopEmp.AllowUserToOrderColumns = true;
             this.dataListTopEmp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataListTopEmp.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataListTopEmp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataListTopEmp.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
@@ -333,7 +346,7 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(133)))), ((int)(((byte)(159)))));
             this.dataListTopEmp.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataListTopEmp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListTopEmp.Size = new System.Drawing.Size(506, 113);
+            this.dataListTopEmp.Size = new System.Drawing.Size(933, 113);
             this.dataListTopEmp.TabIndex = 14;
             // 
             // dataListStock
@@ -343,6 +356,7 @@
             this.dataListStock.AllowUserToOrderColumns = true;
             this.dataListStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataListStock.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataListStock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataListStock.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.SteelBlue;
@@ -377,6 +391,71 @@
             this.dataListStock.Size = new System.Drawing.Size(506, 249);
             this.dataListStock.TabIndex = 15;
             // 
+            // lblNumEmployee
+            // 
+            this.lblNumEmployee.AutoSize = true;
+            this.lblNumEmployee.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumEmployee.ForeColor = System.Drawing.Color.DimGray;
+            this.lblNumEmployee.Location = new System.Drawing.Point(21, 50);
+            this.lblNumEmployee.Name = "lblNumEmployee";
+            this.lblNumEmployee.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblNumEmployee.Size = new System.Drawing.Size(58, 41);
+            this.lblNumEmployee.TabIndex = 1;
+            this.lblNumEmployee.Text = "00";
+            this.lblNumEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNumCustomer
+            // 
+            this.lblNumCustomer.AutoSize = true;
+            this.lblNumCustomer.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumCustomer.ForeColor = System.Drawing.Color.DimGray;
+            this.lblNumCustomer.Location = new System.Drawing.Point(21, 50);
+            this.lblNumCustomer.Name = "lblNumCustomer";
+            this.lblNumCustomer.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblNumCustomer.Size = new System.Drawing.Size(58, 41);
+            this.lblNumCustomer.TabIndex = 2;
+            this.lblNumCustomer.Text = "00";
+            this.lblNumCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNumProvider
+            // 
+            this.lblNumProvider.AutoSize = true;
+            this.lblNumProvider.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumProvider.ForeColor = System.Drawing.Color.DimGray;
+            this.lblNumProvider.Location = new System.Drawing.Point(21, 50);
+            this.lblNumProvider.Name = "lblNumProvider";
+            this.lblNumProvider.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblNumProvider.Size = new System.Drawing.Size(58, 41);
+            this.lblNumProvider.TabIndex = 3;
+            this.lblNumProvider.Text = "00";
+            this.lblNumProvider.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNumCategory
+            // 
+            this.lblNumCategory.AutoSize = true;
+            this.lblNumCategory.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumCategory.ForeColor = System.Drawing.Color.DimGray;
+            this.lblNumCategory.Location = new System.Drawing.Point(21, 50);
+            this.lblNumCategory.Name = "lblNumCategory";
+            this.lblNumCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblNumCategory.Size = new System.Drawing.Size(58, 41);
+            this.lblNumCategory.TabIndex = 4;
+            this.lblNumCategory.Text = "00";
+            this.lblNumCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLastBackup
+            // 
+            this.lblLastBackup.AutoSize = true;
+            this.lblLastBackup.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastBackup.ForeColor = System.Drawing.Color.DimGray;
+            this.lblLastBackup.Location = new System.Drawing.Point(21, 50);
+            this.lblLastBackup.Name = "lblLastBackup";
+            this.lblLastBackup.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblLastBackup.Size = new System.Drawing.Size(58, 41);
+            this.lblLastBackup.TabIndex = 5;
+            this.lblLastBackup.Text = "00";
+            this.lblLastBackup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // DashboardView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,10 +481,15 @@
             this.Load += new System.EventHandler(this.DashboardView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListLastSales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListTopEmp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListStock)).EndInit();
@@ -434,5 +518,10 @@
         private System.Windows.Forms.DataGridView dataListLastSales;
         private System.Windows.Forms.DataGridView dataListTopEmp;
         private System.Windows.Forms.DataGridView dataListStock;
+        private System.Windows.Forms.Label lblNumEmployee;
+        private System.Windows.Forms.Label lblNumCustomer;
+        private System.Windows.Forms.Label lblNumProvider;
+        private System.Windows.Forms.Label lblNumCategory;
+        private System.Windows.Forms.Label lblLastBackup;
     }
 }

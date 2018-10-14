@@ -97,6 +97,21 @@ namespace Business
 
             return Convert.ToBase64String(hash);
         }
+
+        public static string NumEmployee()
+        {
+            DataTable dtResutl = new EmployeeData().NumEmployee();
+            string numEmployee;
+            if(dtResutl.Rows.Count == 0)
+            {
+                numEmployee = "00";
+            }else
+            {
+                numEmployee = dtResutl.Rows[0][0].ToString();
+                numEmployee = (numEmployee.Length == 1) ? "0" + numEmployee : numEmployee;
+            }
+            return numEmployee;            
+        }
         #endregion
     }
 }

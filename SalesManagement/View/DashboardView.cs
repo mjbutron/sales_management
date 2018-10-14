@@ -20,7 +20,8 @@ namespace View
 
         private void ShowData()
         {
-            this.dataListStock.DataSource = ItemController.StockItems();
+            this.lblNumEmployee.Text = EmployeeController.NumEmployee();
+            this.dataListStock.DataSource = ItemController.LowStockItems();
             this.dataListLastSales.DataSource = SaleController.ShowLastSales();
             this.dataListTopEmp.DataSource = EmployeeController.ShowTopEmployee();
         }
