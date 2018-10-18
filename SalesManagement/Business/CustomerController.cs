@@ -69,6 +69,22 @@ namespace Business
             DCustomer.FindText = text;
             return DCustomer.FindByNumDoc(DCustomer);
         }
+
+        public static string NumCustomer()
+        {
+            DataTable dtResutl = new CustomerData().NumCustomer();
+            string numCustomer;
+            if (dtResutl.Rows.Count == 0)
+            {
+                numCustomer = "00";
+            }
+            else
+            {
+                numCustomer = dtResutl.Rows[0][0].ToString();
+                numCustomer = (numCustomer.Length == 1) ? "0" + numCustomer : numCustomer;
+            }
+            return numCustomer;
+        }
         #endregion
     }
 }

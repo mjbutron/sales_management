@@ -21,6 +21,9 @@ namespace View
         private void ShowData()
         {
             this.lblNumEmployee.Text = EmployeeController.NumEmployee();
+            this.lblNumCustomer.Text = CustomerController.NumCustomer();
+            this.lblNumProvider.Text = ProviderController.NumProvider();
+            this.lblNumCategory.Text = CategoryController.NumCategory();
             this.dataListStock.DataSource = ItemController.LowStockItems();
             this.dataListLastSales.DataSource = SaleController.ShowLastSales();
             this.dataListTopEmp.DataSource = EmployeeController.ShowTopEmployee();

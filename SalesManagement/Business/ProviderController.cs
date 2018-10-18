@@ -71,6 +71,22 @@ namespace Business
             DProvider.FindText = text;
             return DProvider.FindByNumDoc(DProvider);
         }
+
+        public static string NumProvider()
+        {
+            DataTable dtResutl = new ProviderData().NumProvider();
+            string numProvider;
+            if (dtResutl.Rows.Count == 0)
+            {
+                numProvider = "00";
+            }
+            else
+            {
+                numProvider = dtResutl.Rows[0][0].ToString();
+                numProvider = (numProvider.Length == 1) ? "0" + numProvider : numProvider;
+            }
+            return numProvider;
+        }
         #endregion
     }
 }

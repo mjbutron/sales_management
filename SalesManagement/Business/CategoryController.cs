@@ -46,6 +46,22 @@ namespace Business
             DCat.FindText = text;
             return DCat.FindByName(DCat);
         }
+
+        public static string NumCategory()
+        {
+            DataTable dtResutl = new CategoryData().NumCategory();
+            string numCategory;
+            if (dtResutl.Rows.Count == 0)
+            {
+                numCategory = "00";
+            }
+            else
+            {
+                numCategory = dtResutl.Rows[0][0].ToString();
+                numCategory = (numCategory.Length == 1) ? "0" + numCategory : numCategory;
+            }
+            return numCategory;
+        }
         #endregion
     }
 }
