@@ -36,7 +36,6 @@
             this.chkDelete = new System.Windows.Forms.CheckBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.txtFindtext = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -54,6 +53,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataList = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.lblSearch = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataList)).BeginInit();
             this.SuspendLayout();
@@ -97,19 +97,9 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(1002, 33);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "&Buscar";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // txtFindtext
             // 
-            this.txtFindtext.Location = new System.Drawing.Point(637, 35);
+            this.txtFindtext.Location = new System.Drawing.Point(718, 34);
             this.txtFindtext.Name = "txtFindtext";
             this.txtFindtext.Size = new System.Drawing.Size(359, 20);
             this.txtFindtext.TabIndex = 1;
@@ -281,11 +271,21 @@
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
             // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(668, 37);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(46, 13);
+            this.lblSearch.TabIndex = 10;
+            this.lblSearch.Text = "Buscar: ";
+            // 
             // CategoryView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1089, 732);
+            this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.dataList);
             this.Controls.Add(this.btnEdit);
@@ -304,7 +304,6 @@
             this.Controls.Add(this.lblItem);
             this.Controls.Add(this.txtFindtext);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CategoryView";
             this.Text = "Gestión de Categorías";
@@ -321,7 +320,6 @@
         private System.Windows.Forms.CheckBox chkDelete;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtFindtext;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnEdit;
@@ -339,5 +337,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataList;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
+        private System.Windows.Forms.Label lblSearch;
     }
 }

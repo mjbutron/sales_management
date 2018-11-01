@@ -53,6 +53,7 @@
             this.lblNumCategory = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblProxBackup = new System.Windows.Forms.Label();
             this.lblLastBackup = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.dataListLastSales = new System.Windows.Forms.DataGridView();
             this.dataListTopEmp = new System.Windows.Forms.DataGridView();
             this.dataListStock = new System.Windows.Forms.DataGridView();
-            this.lblProxBackup = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -267,6 +267,16 @@
             this.panel6.Size = new System.Drawing.Size(100, 124);
             this.panel6.TabIndex = 7;
             // 
+            // lblProxBackup
+            // 
+            this.lblProxBackup.AutoSize = true;
+            this.lblProxBackup.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblProxBackup.Location = new System.Drawing.Point(8, 76);
+            this.lblProxBackup.Name = "lblProxBackup";
+            this.lblProxBackup.Size = new System.Drawing.Size(80, 13);
+            this.lblProxBackup.TabIndex = 6;
+            this.lblProxBackup.Text = "Prox. 00/00/00";
+            // 
             // lblLastBackup
             // 
             this.lblLastBackup.AutoSize = true;
@@ -373,6 +383,7 @@
             this.dataListLastSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListLastSales.Size = new System.Drawing.Size(327, 249);
             this.dataListLastSales.TabIndex = 13;
+            this.dataListLastSales.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataListLastSales_CellFormatting);
             // 
             // dataListTopEmp
             // 
@@ -457,16 +468,7 @@
             this.dataListStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListStock.Size = new System.Drawing.Size(506, 249);
             this.dataListStock.TabIndex = 15;
-            // 
-            // lblProxBackup
-            // 
-            this.lblProxBackup.AutoSize = true;
-            this.lblProxBackup.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblProxBackup.Location = new System.Drawing.Point(8, 76);
-            this.lblProxBackup.Name = "lblProxBackup";
-            this.lblProxBackup.Size = new System.Drawing.Size(80, 13);
-            this.lblProxBackup.TabIndex = 6;
-            this.lblProxBackup.Text = "Prox. 00/00/00";
+            this.dataListStock.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataListStock_CellFormatting);
             // 
             // DashboardView
             // 

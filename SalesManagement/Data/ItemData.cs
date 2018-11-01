@@ -355,7 +355,7 @@ namespace Data
 
         }
 
-        public DataTable FindByName(ItemData Item)
+        public DataTable FindByComboBox(string procedure, string param, ItemData Item)
         {
             DataTable DataTableRes = new DataTable("articulo");
             SqlConnection SqlCon = new SqlConnection();
@@ -366,11 +366,11 @@ namespace Data
 
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "pbuscarnombre_articulo";
+                SqlCmd.CommandText = procedure;
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter ParTextIt = new SqlParameter();
-                ParTextIt.ParameterName = "@nombre";
+                ParTextIt.ParameterName = param;
                 ParTextIt.SqlDbType = SqlDbType.VarChar;
                 ParTextIt.Size = 50;
                 ParTextIt.Value = Item.FindText;
@@ -394,7 +394,7 @@ namespace Data
 
             return DataTableRes;
 
-        }
+        }     
 
         public DataTable StockItems()
         {

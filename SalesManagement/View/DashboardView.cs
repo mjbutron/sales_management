@@ -38,5 +38,36 @@ namespace View
         {
             this.ShowData();
         }
+
+        private void dataListStock_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if(this.dataListStock.Columns[e.ColumnIndex].Name == "Actual")
+            {
+                try
+                {
+                    if(!(e.Value is DBNull))
+                    {
+                        if(Convert.ToInt32(e.Value) < 5)
+                        {
+                            e.CellStyle.ForeColor = Color.Red;
+                        }else
+                        {
+                            e.CellStyle.ForeColor = Color.Orange;
+                        }
+                    }
+                } catch (NullReferenceException ex)
+                {
+                    MessageBox.Show("" + ex);
+                }
+            }
+        }
+
+        private void dataListLastSales_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dataListLastSales.Columns[e.ColumnIndex].Name == "Total")
+            {
+                e.CellStyle.Format = "N2";
+            }
+        }
     }
 }

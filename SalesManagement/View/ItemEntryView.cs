@@ -39,7 +39,7 @@ namespace View
 
         private void FindName()
         {
-            this.dataList.DataSource = ItemController.FindByName(this.txtFindtext.Text);
+            //this.dataList.DataSource = ItemController.FindByName(this.txtFindtext.Text);
             this.HiddenColums();
             lblTotal.Text = "Total de regitros: " + Convert.ToString(dataList.Rows.Count);
         }

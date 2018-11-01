@@ -46,11 +46,11 @@ namespace Business
             return new ItemData().Show();
         }
 
-        public static DataTable FindByName(string text)
+        public static DataTable FindByComboBox(string procedure, string param, string text)
         {
             ItemData DItem = new ItemData();
             DItem.FindText = text;
-            return DItem.FindByName(DItem);
+            return DItem.FindByComboBox(procedure, param, DItem);
         }
 
         public static DataTable StockItems()

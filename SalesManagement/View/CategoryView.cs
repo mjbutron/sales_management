@@ -96,11 +96,6 @@ namespace View
             this.EnableButtons();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            this.FindName();
-        }
-
         private void txtFindtext_TextChanged(object sender, EventArgs e)
         {
             this.FindName();

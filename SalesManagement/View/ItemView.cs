@@ -118,9 +118,9 @@ namespace View
             lblTotal.Text = "Total de regitros: " + Convert.ToString(dataList.Rows.Count);
         }
 
-        private void FindName()
+        private void FindByComboBox(string procedure, string param)
         {
-            this.dataList.DataSource = ItemController.FindByName(this.txtFindtext.Text);
+            this.dataList.DataSource = ItemController.FindByComboBox(procedure, param, this.txtFindtext.Text);
             this.HiddenColums();
             lblTotal.Text = "Total de regitros: " + Convert.ToString(dataList.Rows.Count);
         }
@@ -153,12 +153,14 @@ namespace View
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            this.FindName();
-        }
-
-        private void txtFindtext_TextChanged(object sender, EventArgs e)
-        {
-            this.FindName();
+            if (cbxFind.Text.Equals("Nombre"))
+            {
+                this.FindByComboBox("pbuscarnombre_articulo", "@nombre");
+            }
+            else if (cbxFind.Text.Equals("Código"))
+            {
+                this.FindByComboBox("pbuscarcodigo_articulo", "@codigo");
+            }                
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -322,6 +324,12 @@ namespace View
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+        }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            this.txtFindtext.Text = "";
+            this.FindByComboBox("pbuscarnombre_articulo", "@nombre");
         }
     }
 }
