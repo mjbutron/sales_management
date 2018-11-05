@@ -100,16 +100,9 @@ namespace View
             lblTotal.Text = "Total de regitros: " + Convert.ToString(dataList.Rows.Count);
         }
 
-        private void FindLastName()
+        private void FindByComboBox(string procedure, string param)
         {
-            this.dataList.DataSource = EmployeeController.FindByLastName(this.txtFindtext.Text);
-            this.HiddenColums();
-            lblTotal.Text = "Total de regitros: " + Convert.ToString(dataList.Rows.Count);
-        }
-
-        private void FindNumDoc()
-        {
-            this.dataList.DataSource = EmployeeController.FindByNumDoc(this.txtFindtext.Text);
+            this.dataList.DataSource = EmployeeController.FindByComboBox(procedure, param, this.txtFindtext.Text);
             this.HiddenColums();
             lblTotal.Text = "Total de regitros: " + Convert.ToString(dataList.Rows.Count);
         }
@@ -127,11 +120,11 @@ namespace View
         {
             if (cbxFind.Text.Equals("Apellido"))
             {
-                this.FindLastName();
+                this.FindByComboBox("pbuscarapellidos_empleado", "@apellidos");
             }
             else if (cbxFind.Text.Equals("Num. Documento"))
             {
-                this.FindNumDoc();
+                this.FindByComboBox("pbuscar_empleado_dni", "@dni");
             }
         }
 
@@ -296,6 +289,12 @@ namespace View
                 DataGridViewCheckBoxCell ChkDelete = (DataGridViewCheckBoxCell)dataList.Rows[e.RowIndex].Cells["Eliminar"];
                 ChkDelete.Value = !Convert.ToBoolean(ChkDelete.Value);
             }
+        }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            this.txtFindtext.Text = "";
+            this.FindByComboBox("pbuscarapellidos_empleado", "@apellidos");
         }
     }
 }

@@ -61,18 +61,11 @@ namespace Business
             return new EmployeeData().Show();
         }
 
-        public static DataTable FindByLastName(string text)
+        public static DataTable FindByComboBox(string procedure, string param, string text)
         {
             EmployeeData DEmployee = new EmployeeData();
             DEmployee.FindText = text;
-            return DEmployee.FindByLastName(DEmployee);
-        }
-
-        public static DataTable FindByNumDoc(string text)
-        {
-            EmployeeData DEmployee = new EmployeeData();
-            DEmployee.FindText = text;
-            return DEmployee.FindByNumDoc(DEmployee);
+            return DEmployee.FindByComboBox(procedure, param, DEmployee);
         }
 
         public static DataTable Login(string user, string pass)

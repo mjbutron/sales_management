@@ -530,7 +530,7 @@ namespace Data
 
         }
 
-        public DataTable FindByLastName(EmployeeData Employee)
+        public DataTable FindByComboBox(string procedure, string param, EmployeeData Employee)
         {
             DataTable DataTableRes = new DataTable("empleado");
             SqlConnection SqlCon = new SqlConnection();
@@ -541,54 +541,13 @@ namespace Data
 
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "pbuscarapellidos_empleado";
+                SqlCmd.CommandText = procedure;
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter ParText = new SqlParameter();
-                ParText.ParameterName = "@apellidos";
+                ParText.ParameterName = param;
                 ParText.SqlDbType = SqlDbType.VarChar;
                 ParText.Size = 50;
-                ParText.Value = Employee.FindText;
-                SqlCmd.Parameters.Add(ParText);
-
-                SqlDataAdapter SqlAdapter = new SqlDataAdapter(SqlCmd);
-                SqlAdapter.Fill(DataTableRes);
-            }
-            catch (Exception e)
-            {
-                DataTableRes = null;
-                Console.WriteLine(e);
-            }
-            finally
-            {
-                if (SqlCon.State == ConnectionState.Open)
-                {
-                    SqlCon.Close();
-                }
-            }
-
-            return DataTableRes;
-
-        }
-
-        public DataTable FindByNumDoc(EmployeeData Employee)
-        {
-            DataTable DataTableRes = new DataTable("empleado");
-            SqlConnection SqlCon = new SqlConnection();
-            try
-            {
-                SqlCon.ConnectionString = Connection.Con;
-                SqlCon.Open();
-
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "pbuscar_empleado_dni";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                SqlParameter ParText = new SqlParameter();
-                ParText.ParameterName = "@dni";
-                ParText.SqlDbType = SqlDbType.VarChar;
-                ParText.Size = 9;
                 ParText.Value = Employee.FindText;
                 SqlCmd.Parameters.Add(ParText);
 
