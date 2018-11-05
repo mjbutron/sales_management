@@ -100,5 +100,10 @@ namespace View
             saleView.IdEmployee = Convert.ToInt32(this.IdEmployee);
             openViewInPanel(saleView);
         }
+
+        private void btnProvider_Click(object sender, EventArgs e)
+        {
+            openViewInPanel(new ProviderView());
+        }
     }
 }

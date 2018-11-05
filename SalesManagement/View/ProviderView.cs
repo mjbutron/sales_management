@@ -293,8 +293,6 @@ namespace View
             this.txtFax.Text = Convert.ToString(this.dataList.CurrentRow.Cells["fax"].Value);
             this.txtEmail.Text = Convert.ToString(this.dataList.CurrentRow.Cells["email"].Value);
             this.txtWeb.Text = Convert.ToString(this.dataList.CurrentRow.Cells["web"].Value);
-
-            this.tabControl1.SelectedIndex = 1;
         }
     }
 }

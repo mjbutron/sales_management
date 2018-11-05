@@ -202,6 +202,7 @@
             this.btnProvider.TabIndex = 8;
             this.btnProvider.Text = "Proveedores";
             this.btnProvider.UseVisualStyleBackColor = true;
+            this.btnProvider.Click += new System.EventHandler(this.btnProvider_Click);
             // 
             // btnEntry
             // 
