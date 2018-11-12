@@ -275,11 +275,6 @@ namespace View
             }
         }
 
-        private void dataList_DockChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void dataList_DoubleClick(object sender, EventArgs e)
         {
             this.txtIdprovider.Text = Convert.ToString(this.dataList.CurrentRow.Cells["id_proveedor"].Value);

@@ -456,7 +456,7 @@ namespace Data
             }
             catch (Exception e)
             {
-                res = e.Message;
+                res = "No se ha podido eliminar el proveedor con identificador " + Provider.IdProvider + ". Posible referencia a una entrada de almacén.";
             }
             finally
             {

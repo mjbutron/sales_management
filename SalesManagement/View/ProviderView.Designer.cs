@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tltMessage = new System.Windows.Forms.ToolTip(this.components);
             this.cbxFind = new System.Windows.Forms.ComboBox();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -43,7 +43,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblProvider = new System.Windows.Forms.Label();
             this.dataList = new System.Windows.Forms.DataGridView();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.chkDelete = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,6 +69,17 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtMobile = new System.Windows.Forms.TextBox();
             this.txtFax = new System.Windows.Forms.TextBox();
+            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.razon_social = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sector = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num_documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.movil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.web = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.errorInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataList)).BeginInit();
             this.SuspendLayout();
@@ -164,17 +174,27 @@
             this.dataList.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewCheckBoxColumn1});
+            this.Eliminar,
+            this.razon_social,
+            this.sector,
+            this.tipo_documento,
+            this.num_documento,
+            this.direccion,
+            this.telefono,
+            this.movil,
+            this.fax,
+            this.email,
+            this.web});
             this.dataList.EnableHeadersVisualStyles = false;
             this.dataList.GridColor = System.Drawing.Color.SteelBlue;
             this.dataList.Location = new System.Drawing.Point(16, 60);
@@ -182,28 +202,24 @@
             this.dataList.Name = "dataList";
             this.dataList.ReadOnly = true;
             this.dataList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(133)))), ((int)(((byte)(159)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataList.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(133)))), ((int)(((byte)(159)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataList.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataList.RowHeadersVisible = false;
             this.dataList.RowHeadersWidth = 50;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(133)))), ((int)(((byte)(159)))));
-            this.dataList.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(133)))), ((int)(((byte)(159)))));
+            this.dataList.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataList.Size = new System.Drawing.Size(1061, 277);
             this.dataList.TabIndex = 9;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Eliminar";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataList_CellContentClick);
+            this.dataList.DoubleClick += new System.EventHandler(this.dataList_DoubleClick);
             // 
             // chkDelete
             // 
@@ -440,6 +456,94 @@
             this.txtFax.Size = new System.Drawing.Size(354, 20);
             this.txtFax.TabIndex = 24;
             // 
+            // Eliminar
+            // 
+            this.Eliminar.FillWeight = 83.75635F;
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            // 
+            // razon_social
+            // 
+            this.razon_social.DataPropertyName = "razon_social";
+            this.razon_social.FillWeight = 120.8125F;
+            this.razon_social.HeaderText = "Razón Social";
+            this.razon_social.Name = "razon_social";
+            this.razon_social.ReadOnly = true;
+            this.razon_social.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // sector
+            // 
+            this.sector.DataPropertyName = "sector";
+            this.sector.FillWeight = 93.22549F;
+            this.sector.HeaderText = "Sector";
+            this.sector.Name = "sector";
+            this.sector.ReadOnly = true;
+            // 
+            // tipo_documento
+            // 
+            this.tipo_documento.DataPropertyName = "tipo_documento";
+            this.tipo_documento.FillWeight = 95.12805F;
+            this.tipo_documento.HeaderText = "Documento";
+            this.tipo_documento.Name = "tipo_documento";
+            this.tipo_documento.ReadOnly = true;
+            // 
+            // num_documento
+            // 
+            this.num_documento.DataPropertyName = "num_documento";
+            this.num_documento.FillWeight = 148.4114F;
+            this.num_documento.HeaderText = "Nº Documento";
+            this.num_documento.Name = "num_documento";
+            this.num_documento.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.DataPropertyName = "direccion";
+            this.direccion.FillWeight = 93.70113F;
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            this.telefono.DataPropertyName = "telefono";
+            this.telefono.FillWeight = 93.70113F;
+            this.telefono.HeaderText = "Teléfono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // movil
+            // 
+            this.movil.DataPropertyName = "movil";
+            this.movil.FillWeight = 92.81599F;
+            this.movil.HeaderText = "Movil";
+            this.movil.Name = "movil";
+            this.movil.ReadOnly = true;
+            // 
+            // fax
+            // 
+            this.fax.DataPropertyName = "fax";
+            this.fax.FillWeight = 92.81599F;
+            this.fax.HeaderText = "Fax";
+            this.fax.Name = "fax";
+            this.fax.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.FillWeight = 92.81599F;
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // web
+            // 
+            this.web.DataPropertyName = "web";
+            this.web.FillWeight = 92.81599F;
+            this.web.HeaderText = "Web";
+            this.web.Name = "web";
+            this.web.ReadOnly = true;
+            // 
             // ProviderView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,7 +608,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblProvider;
         private System.Windows.Forms.DataGridView dataList;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.CheckBox chkDelete;
         private System.Windows.Forms.TextBox txtFax;
         private System.Windows.Forms.TextBox txtMobile;
@@ -531,5 +634,16 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn razon_social;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sector;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_documento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num_documento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn movil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn web;
     }
 }
